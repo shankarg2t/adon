@@ -28,6 +28,7 @@ app/etc/modules/Phoenix_Moneybookers.xml
 app/etc/config.xml
 app/etc/local.xml.additional
 app/etc/local.xml.template
+app/etc/local.xml
 app/.htaccess
 app/locale/en_US/
 app/Mage.php
@@ -73,6 +74,7 @@ media/downloadable/
 media/.htaccess
 media/import/
 media/xmlconnect/
+media/catalog/
 nbproject/
 pear
 pear/
