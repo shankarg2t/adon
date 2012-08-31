@@ -1,0 +1,56 @@
+
+<div class="product-specs">
+<?php
+
+
+
+
+//$easytabsDivs = array();
+//$easytabsDivs = explode("<div >", $this->getLayout()->getBlock('product.info.options')->toHtml());
+//echo '<div>'. $easytabsDivs[2];
+
+
+
+
+
+//var_dump($this->getLayout()->getBlock('product.info.options')->helper('product_options'));
+//var_dump($this->getLayout()->getBlock('product.info.options')->getChildData('product_options'));
+
+
+
+//echo $this->getLayout()->getBlock('product.info.options')->getBlockHtml('product.info.options');
+
+echo $this->getLayout()->getBlock('product.info.options')->toHtml(); 
+
+//var_dump(Mage::app()->getBlockSingleton('product.info.options'));
+
+/*
+$product = Mage::getModel("catalog/product")->load(Mage::registry('current_product')->getId());
+    $i = 1;
+ 
+    echo "<pre>";
+ 
+    foreach ($product->getOptions() as $o) {
+ 
+        echo "<strong>Custom Option:" . $i . "</strong><br/>";
+        echo "Custom Option TYPE: " . $o->getType() . "<br/>";
+        echo "Custom Option TITLE: " . $o->getTitle() . "<br/>";
+        echo "Custom Option Values: <br/>";
+ 
+        // Getting Values if it has option values, case of select,dropdown,radio,multiselect
+ 
+        $values = $o->getValues();
+        foreach ($values as $v) {
+ 
+                print_r($v->getData());
+        }
+ 
+        $i++;
+ 
+        echo "----------------------------------<br/>";
+    }
+*/
+
+
+?>
+</div> 

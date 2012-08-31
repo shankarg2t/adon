@@ -98,3 +98,4 @@ skin/install/
 var/
 .htaccess
 
+/media/wysiwyg/.thumbs/

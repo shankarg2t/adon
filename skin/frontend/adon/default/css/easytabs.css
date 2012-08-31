@@ -1,0 +1,69 @@
+/********************** Tabs */
+.product-view .tabs {  overflow:hidden;   zoom: 1;}
+.product-view .tabs li                { 
+    float:left; 
+    margin-left: 10px;
+}
+.product-view .tabs li.first          { margin-left: 0; }
+.product-view .tabs li.last           {  }
+.product-view .tabs a                 { 
+    display:block; 
+    font-size: 14px;
+    font-weight: 300;
+    text-decoration:none;
+    margin: 10px 0;
+
+    display:inline-block;
+    padding:4px 20px;
+
+    -moz-box-shadow: 1px 1px 1px 0px #000000;
+    -webkit-box-shadow: 1px 1px 1px 0px #000000;
+    box-shadow: 1px 1px 1px 0px #000000;  
+
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    border-radius:4px;  
+}
+
+.product-view .tabs li.active a {
+    color:#fff;
+    text-shadow:1px 1px 0px #b23e35;
+    border:1px solid #d83526;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff3300), color-stop(1, #d51800) );
+    background:-moz-linear-gradient( center top, #ff3300 5%, #d51800 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3300', endColorstr='#d51800');
+    background-color:#ff3300;
+}
+
+.product-view .tabs li.active a:hover { 
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #d51800), color-stop(1, #a81402) );
+    background:-moz-linear-gradient( center top, #d51800 5%, #a81402 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d51800', endColorstr='#a81402');
+    background-color:#d51800;
+}
+.product-view .tabs li.inactive a {
+    color:#373737;
+  text-shadow:1px 1px 0px #ddd;
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fefefe), color-stop(1, #eaeaea) );
+  background:-moz-linear-gradient( center top, #fefefe 5%, #eaeaea 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fefefe', endColorstr='#eaeaea');
+  background-color:#fefefe;  
+  border:1px solid #dadada;
+}
+.product-view .tabs li.inactive a:hover {
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fefefe), color-stop(1, #c7c7c7) );
+  background:-moz-linear-gradient( center top, #fefefe 5%, #c7c7c7 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fefefe', endColorstr='#c7c7c7');
+  background-color:#fefefe;
+}
+
+
+
+
+
+
+#product_tabs_tags_tabbed_contents.input-box input	{ width: 300px; }
+#product_tabs_tags_tabbed_contents .input-box	{ width: 300px; float:left; margin-right: 10px;}
+#product_tabs_related_tabbed_contents li	{ float:left; margin-right: 10px;}
+#product_tabs_related_tabbed_contents ol	{ clear: both;}
+.product-collateral:after { content:"."; display:block; clear:both; font-size:0; line-height:0; height:0; overflow:hidden; zoom: 1}

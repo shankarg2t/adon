@@ -1,0 +1,248 @@
+/* Livechat Background */
+#livechat { background-color: #454545; display: none; height:230px; overflow: hidden; }
+
+/* Metanavi - Margin Top if chat is active */
+#metanavi-slidedown.chat-active { margin-top: 230px; }
+
+
+/* Chat - Full Width */
+#habla_window_div {
+	position: absolute;
+	top:0;
+	width:100%;
+}
+/* Chat Window */
+.habla_panel_border {
+	width:960px;
+	margin: 0 auto;
+	color: #fff;
+}
+
+/* z-index */
+.habla_window_div_base { z-index:99999 !important; }
+
+/* clear style */
+.clear_style { clear:both; }
+
+
+/* Operator Name */
+.habla_conversation_person2 { color:#fff; padding-right:5px; }
+
+/* Client Name ??? */
+.habla_conversation_person1 { color:#fff; padding-right:5px; }
+
+/* Chat Messages */
+.habla_conversation_text_span { color:#ccc; }
+
+
+/* Conversation Container */
+.habla_conversation_div {
+	border-bottom:1px dotted #CCCCCC;
+	height:155px;
+	line-height:1.5em;
+	overflow:auto;
+	padding:3px 3px 3px 23px !important;
+}
+
+/* Conversation Line */
+.habla_conversation_p_item {
+	margin:0;
+	padding:0;
+	text-indent:-20px;
+	margin-bottom: 3px;
+}
+
+
+
+/* Message Input Container */
+.habla_chatform_form {
+	margin:0 !important;
+	padding:0 !important;
+}
+
+/* Message-Input Field */
+.habla_wcsend_field {
+	background:transparent none repeat scroll 0 0;
+	font-size:12px;
+	height:24px;
+	margin:0 !important;
+	overflow:auto !important;
+	padding:1px 3px !important;
+	vertical-align:text-top;
+	width:928px;
+}
+.habla_wcsend_input_highlighted { color:#fff !important; } /* Message-Input Field Highlighted */
+.habla_wcsend_input_pre { color:#ccc; } /* Message-Input Field - Standard */
+
+ 
+
+
+/* Offline Message Container */
+.habla_offline_message_div {
+	line-height:1.5em;
+	margin:0;
+	padding:3px;
+}
+
+/* Offline Message sent */
+.habla_offline_message_sent_div {
+	background:transparent none repeat scroll 0 0;
+	border-bottom:1px dotted #CCCCCC;
+	height:155px;
+	line-height:1.5em;
+	overflow:auto !important;
+	padding:3px !important;
+}
+
+/* Offline Message Submit Button */
+.habla_offline_submit_input {
+	background:#f81b00 none repeat scroll 0 0 !important;
+	border:medium none #CCCCCC !important;
+	color:white !important;
+	float:right;
+	margin-right:18px;
+}
+
+	
+/*
+	.habla_offline_body_input {
+		font-family:verdana,arial,helvetica;
+		font-size:12px;
+		height:155px;
+		vertical-align:text-top;
+		width:234px;
+	}
+	
+
+	
+	.habla_offline_error_span {
+		float:left;
+		font-family:verdana,arial,helvetica;
+		font-size:12px;
+	}
+*/
+	
+
+
+
+/* Pre-Chat Container */
+.habla_pre_chat_div {
+	background:transparent none repeat scroll 0 0;
+	border-bottom:1px dotted #CCCCCC;
+	height:155px;
+	line-height:1.5em;
+	overflow:auto;
+	color: #fff;
+	padding:3px 0;  
+}
+
+
+
+
+/* minimize Button */
+
+.habla_button_a_highlighted {
+	background-color:#666666 ;
+	color:#FFFFFF;
+}
+.habla_button_a_hover {
+	background-color:#666666 ;
+	color:#FFFFFF;
+}
+a.habla_button_a_hover:hover {
+    font-size:14px;   
+}
+.habla_button_a_normal {
+	background-color:#333333 ;
+	color:#FFFFFF;
+}
+.habla_button {
+	float:right;
+	font-weight:bold;
+	margin-left:3px;
+	padding:0 6px 2px;
+	text-decoration:none !important;
+}
+
+
+
+
+
+		/*
+		.habla_input_div {
+			font-weight:normal !important;
+			margin:0 !important;
+			padding:3px !important;
+			background-color: red;
+		}
+		*/
+		
+		
+		/*
+		.habla_say_text_span {
+			color:#000000 ;
+		}
+		*/
+		.habla_submit_button {
+			font-family:verdana,arial,helvetica;
+			font-size:12px;
+			margin:0 !important;
+			vertical-align:text-top;
+			width:234px;
+		}
+		
+
+
+
+
+
+
+
+
+
+	
+	/*
+	.habla_conversation_message_off {
+		margin:0 !important;
+		padding:3px 3px 3px 23px;
+	}
+	.habla_conversation_message_on {
+		margin:0;
+		padding:5px;
+	}
+	*/
+	
+	
+	
+	/*
+	.habla_topbar_div_highlighted {
+	color:#00FFFF;
+	padding:4px;
+	}
+	.habla_topbar_div_normal {
+	background:#333333 none repeat scroll 0 0;
+	color:#FFFFFF;
+	padding:4px;
+	display: none;
+	}
+	.habla_topbar_clickable {
+	cursor:pointer;
+	}
+	.habla_oplink_a_hover {
+	color:#FFFFFF;
+	font-weight:normal;
+	text-decoration:underline;
+	}
+	a.habla_oplink_a_hover:hover {
+	    font-size:14px;  
+	}
+	.habla_oplink_a_normal {
+	color:#FFFFFF;
+	font-weight:normal;
+	text-decoration:none;
+	}
+	*/
+	
+
+
+
