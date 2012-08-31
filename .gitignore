@@ -70,6 +70,7 @@ LICENSE.html
 LICENSE.txt
 mage
 media/customer/
+media/catalog/product/cache/
 media/downloadable/
 media/.htaccess
 media/import/
