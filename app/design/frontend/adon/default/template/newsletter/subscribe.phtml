@@ -24,20 +24,9 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-<form action="<?php echo $this->getFormActionUrl() ?>" method="post" id="newsletter-validate-detail">
-    <div class="form-subscribe">
-        <div class="form-subscribe-header">
-            <label for="newsletter"><?php echo $this->__('Newsletter Sign-up:') ?></label>
-        </div>
-        <div class="input-box">
-           <input type="text" name="email" id="newsletter" title="<?php echo $this->__('Sign up for our newsletter') ?>" class="input-text required-entry validate-email" />
-        </div>
-        <button type="submit" title="<?php echo $this->__('Submit') ?>" class="button"><span><span><?php echo $this->__('Submit') ?></span></span></button>
-    </div>
-</form>
-<script type="text/javascript">
-//<![CDATA[
-    var newsletterSubscriberFormDetail = new VarienForm('newsletter-validate-detail');
-    new Varien.searchForm('newsletter-validate-detail', 'newsletter', '<?php echo $this->helper('newsletter')->__('Enter your email address') ?>');
-//]]>
-</script>
+
+<a onclick="pageTracker._trackPageview('/_forms/newsletter-form/open');" class="greyButton" rel="prettyPhoto" href="#newsletter-form">
+			<img alt="email" src="<?php echo $this->getSkinUrl('images/email.png') ?>" />&nbsp;
+			Newsletter</a>
+
+<div class="hide" id="newsletter-form"><iframe width="500" scrolling="no" height="300" frameborder="0" border="0" src="http://www.adcom-production.ch/de/newsletter/"></iframe></div>

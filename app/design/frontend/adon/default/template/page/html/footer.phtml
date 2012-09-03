@@ -29,10 +29,10 @@
         <?php echo $this->getChildHtml('bottomContainer') ?>
         <div class="f-right">
             <?php echo $this->getChildHtml('store_switcher') ?>
-            <?php echo $this->getChildHtml('newsletter') ?>
+            
             	<a onclick="_gaq.push(['_trackEvent', 'Facebook', 'Header Click']);" target="_blank" href="https://www.facebook.com/AdonProduction"><img alt="Facebook" src="<?php echo($this->getSkinUrl('images/facebook.png')) ?>"></a>
-	<a onclick="_gaq.push(['_trackEvent', 'Xing', 'Header']);" target="_blank" href="http://www.xing.com/companies/adcomproductionag/"><img width="98" height="23" border="0" alt="Adcom Production AG" title="Adcom Production AG" src="http://www.xing.com/img/xing/xe/corporate_pages/cp_button.png"></a>
-
+	<a onclick="_gaq.push(['_trackEvent', 'Xing', 'Header']);" target="_blank" href="http://www.xing.com/companies/adcomproductionag/"><img width="98" height="23" border="0" alt="Adcom Production AG" title="Adcom Production AG" src="http://www.xing.com/img/xing/xe/corporate_pages/cp_button.png"></a><br/>
+<?php echo $this->getChildHtml('newsletter') ?>
         </div>
         <div class="f-left">
             <b><?php echo Mage::getStoreConfig('general/store_information/name'); ?> </b>
