@@ -99,3 +99,4 @@ var/
 .htaccess
 
 /media/wysiwyg/.thumbs/
+.DS_Store
