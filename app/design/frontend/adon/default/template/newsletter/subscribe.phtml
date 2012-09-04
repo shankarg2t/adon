@@ -26,7 +26,15 @@
 ?>
 
 <a onclick="pageTracker._trackPageview('/_forms/newsletter-form/open');" class="greyButton" rel="prettyPhoto" href="#newsletter-form">
-			<img alt="email" src="<?php echo $this->getSkinUrl('images/email.png') ?>" />&nbsp;
-			Newsletter</a>
+    <img alt="Newsletter" src="<?php echo $this->getSkinUrl('images/email.png') ?>" />&nbsp;
+    Newsletter</a>
 
 <div class="hide" id="newsletter-form"><iframe width="500" scrolling="no" height="300" frameborder="0" border="0" src="http://www.adcom-production.ch/de/newsletter/"></iframe></div>
+
+
+<script type="text/javascript" charset="utf-8">
+    jQuery.noConflict();
+    jQuery(document).ready(function(){
+        jQuery("a[rel^='prettyPhoto']").prettyPhoto();
+    });
+</script>
