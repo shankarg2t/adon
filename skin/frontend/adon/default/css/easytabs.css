@@ -1,5 +1,7 @@
 /********************** Tabs */
-.product-view .tabs {  overflow:hidden;   zoom: 1;}
+.category-usb-sticks-konfigurator .product-view .easytabs {margin-top:150px;}
+.product-view .easytabs {margin-top:180px;}
+.product-view .tabs {  overflow:hidden;   zoom: 1; }
 .product-view .tabs li                { 
     float:left; 
     margin-left: 10px;
@@ -66,4 +68,4 @@
 #product_tabs_tags_tabbed_contents .input-box	{ width: 300px; float:left; margin-right: 10px;}
 #product_tabs_related_tabbed_contents li	{ float:left; margin-right: 10px;}
 #product_tabs_related_tabbed_contents ol	{ clear: both;}
-.product-collateral:after { content:"."; display:block; clear:both; font-size:0; line-height:0; height:0; overflow:hidden; zoom: 1}
+.product-collateral:after { content:"."; display:block; clear:both; font-size:0; line-height:0; height:0; overflow:hidden; zoom: 1;margin-bottom: 30px;}

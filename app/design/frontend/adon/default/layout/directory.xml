@@ -39,7 +39,7 @@ Category default layout
 
     <catalog_category_default>
         <reference name="left">
-            <block type="directory/currency" name="currency" before="catalog.leftnav" template="directory/currency.phtml"/>
+            <block type="directory/currency" name="currency" after="catalog.leftnav" template="directory/currency.phtml"/>
         </reference>
     </catalog_category_default>
 
@@ -49,7 +49,7 @@ Category layered navigation layout
 
     <catalog_category_layered>
         <reference name="left">
-            <block type="directory/currency" name="currency" before="catalog.leftnav" template="directory/currency.phtml"/>
+            <block type="directory/currency" name="currency" after="catalog.leftnav" template="directory/currency.phtml"/>
         </reference>
     </catalog_category_layered>
 

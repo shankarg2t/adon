@@ -4,4 +4,15 @@ if(!empty($cmsblockid)){
 		echo '<div class="product-specs">'.$this->getLayout()->createBlock('cms/block')->setBlockId($cmsblockid)->toHtml().'</div>';
 }
 ?>
-<span>test</span>
+<div class="product-specs">
+<?php
+//echo $this->getLayout()->getBlock('product.info.options')->toHtml(); 
+
+$easytabsDivs = array();
+$easytabsDivs = explode("<div >", $this->getLayout()->getBlock('product.info.options')->toHtml());
+if($easytabsDivs[2] != '' && $easytabsDivs[3] != '') {
+echo '<div>'. $easytabsDivs[2];
+echo '<div>'. $easytabsDivs[3];
+}
+?>
+</div>

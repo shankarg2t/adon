@@ -2,25 +2,14 @@
 <div class="product-specs">
 <?php
 
-
-
-
-//$easytabsDivs = array();
-//$easytabsDivs = explode("<div >", $this->getLayout()->getBlock('product.info.options')->toHtml());
-//echo '<div>'. $easytabsDivs[2];
-
-
-
-
+$easytabsDivs = array();
+$easytabsDivs = explode("<div >", $this->getLayout()->getBlock('product.info.options')->toHtml());
+echo '<div>'. $easytabsDivs[1];
 
 //var_dump($this->getLayout()->getBlock('product.info.options')->helper('product_options'));
 //var_dump($this->getLayout()->getBlock('product.info.options')->getChildData('product_options'));
 
-
-
 //echo $this->getLayout()->getBlock('product.info.options')->getBlockHtml('product.info.options');
-
-echo $this->getLayout()->getBlock('product.info.options')->toHtml(); 
 
 //var_dump(Mage::app()->getBlockSingleton('product.info.options'));
 
@@ -51,6 +40,9 @@ $product = Mage::getModel("catalog/product")->load(Mage::registry('current_produ
     }
 */
 
+
+
+//echo $this->getLayout()->getBlock('product.info.options')->toHtml(); 
 
 ?>
 </div> 
