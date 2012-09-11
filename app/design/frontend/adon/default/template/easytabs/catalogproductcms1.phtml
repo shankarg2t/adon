@@ -11,8 +11,9 @@ if(!empty($cmsblockid)){
 $easytabsDivs = array();
 $easytabsDivs = explode("<div >", $this->getLayout()->getBlock('product.info.options')->toHtml());
 if($easytabsDivs[2] != '' && $easytabsDivs[3] != '') {
+echo '<div>'. $easytabsDivs[1];
 echo '<div>'. $easytabsDivs[2];
-echo '<div>'. $easytabsDivs[3];
 }
 ?>
 </div>
+<div style="clear:both">&nbsp;</div>

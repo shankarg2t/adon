@@ -758,7 +758,7 @@ tr.summary-details-excluded { font-style:italic; }
 .block-layered-nav .block-title { padding:0; margin:0; overflow:hidden; }
 .block-layered-nav .block-content { padding:0; }
 .block-layered-nav .block-subtitle { margin:0; background:#679100; font-size:12px; font-weight:bold; padding:2px 10px; color:#fff; display: none; }
-.block-layered-nav dt { font-weight:bold; padding:4px 10px 0 0; font-size:12px; }
+.block-layered-nav dt { padding:4px 10px 0 0; font-size:12px; }
 .block-layered-nav dd { padding:0 10px 8px 0;  }
 .block-layered-nav dd li { line-height:1.35; margin:0 0 3px; }
 .block-layered-nav dd a { color:#444; }
