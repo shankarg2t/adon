@@ -47,7 +47,7 @@
                 
                         } ?>
                         <a href="<?php echo $category->getUrl() ?>"><?php echo $category->getName() ?></a><br/>
-                        <button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
+                        <button type="button" title="<?php echo $this->__('Buy') ?>" class="button btn-cart" onclick="setLocation('<?php echo $_product->getProductUrl() ?>')"><span><span><?php echo $this->__('Buy') ?></span></span></button>
                 
             </li>
         <?php if ($i%$_columnCount==0 || $i==count($_products)): ?>

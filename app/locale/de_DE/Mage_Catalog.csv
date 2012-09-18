@@ -119,6 +119,7 @@
 "Bottom/Right","Unten rechts"
 "Browse By","Durchsuchen nach"
 "Bundle Items","Bündel-Artikel"
+"Buy","Kaufen"
 "Buy %1$s","Kaufe %1$"
 "Buy %1$s for","Kaufen Sie %1$s zum Preis von "
 "Buy %1$s for %2$s","Kaufen Sie %1$s zum Preis von %2$s"
@@ -818,3 +819,4 @@
 "select all","Alle wählen"
 "unselect all","Alle abwählen"
 "x","x"
+"Please specify the product's option(s).","Bitte wählen Sie Farbe und Speichergrösse aus."
