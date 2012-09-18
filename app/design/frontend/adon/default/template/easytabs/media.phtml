@@ -37,7 +37,7 @@ $_helper = $this->helper('catalog/output');
     <div class="product-image-zoom-cont">
         <p class="product-image product-image-zoom">
             <?php
-            $_img = '<a href="'. $this->helper('catalog/image')->init($_product, 'image') .'" class="MagicMagnifyPlus" id="Magnifier1"><img id="image" src="' . $this->helper('catalog/image')->init($_product, 'image')->resize(300) . '" alt="' . $this->htmlEscape($this->getImageLabel()) . '" title="' . $this->htmlEscape($this->getImageLabel()) . '" /></a>';
+            $_img = '<img id="image" src="' . $this->helper('catalog/image')->init($_product, 'image')->resize(300) . '" alt="' . $this->htmlEscape($this->getImageLabel()) . '" title="' . $this->htmlEscape($this->getImageLabel()) . '" />';
             echo $_helper->productAttribute($_product, $_img, 'image');
             ?>
         </p>
@@ -73,7 +73,7 @@ $_helper = $this->helper('catalog/output');
             <ul>
                 <?php foreach ($this->getGalleryImages() as $_image): ?>
                     <li>
-                        <a href="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile())->resize(500); ?>" title="<?php echo $_product->getName(); ?>" onclick="$('image').src = this.href; return false;" rel="Magnifier1" rev="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile())->resize(300) ?>">
+                        <a href="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile()); ?>" title="<?php echo $_product->getName(); ?>" onclick="$('image').src = this.href; return false;">
                             <img src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(70, 70); ?>" alt="<?php echo $this->htmlEscape($_image->getLabel()) ?>" title="<?php echo $this->htmlEscape($_image->getLabel()) ?>"/>
                         </a>
                     </li>
