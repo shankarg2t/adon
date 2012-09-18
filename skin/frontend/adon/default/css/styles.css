@@ -317,7 +317,11 @@ p.required { font-size:12px; text-align:right; color:#EB340A; }
 .success { color:#3d6611; font-weight:bold; }
 .error { color:#df280a; font-weight:bold; }
 .notice { color:#e26703; }
-
+#messages_product_view {
+    position: absolute;
+    margin-top: -40px;
+    width: 725px;
+}
 .messages,
 .messages ul { list-style:none !important; margin:0 !important; padding:0 !important; }
 .messages { width:100%; overflow:hidden; }
@@ -884,7 +888,7 @@ tr.summary-details-excluded { font-style:italic; }
 .products-grid.last { border-bottom:0; }
 .products-grid li.item { float:left; width:161px; padding:0 9px 90px; }
 .products-grid li.last { padding:0 0 90px 9px;}
-.products-grid .product-image { display:block; width:160px; height:160px; border:1px solid #ddd; border-width:1px 1px 1px 0; margin:0 0 10px; }
+.products-grid .product-image { display:block; width:160px; height:160px; margin:0 0 10px; }
 .products-grid.first .product-image { border-top:0; }
 .products-grid li.last .product-image { border-right:0; }
 .products-grid .product-name { font-size:12px; margin:0 0 6px; }
@@ -1133,7 +1137,7 @@ tr.summary-details-excluded { font-style:italic; }
 .product-options dd .qty-holder label { vertical-align:middle; }
 .product-options dd .qty-disabled { background:none; border:0; padding:3px; color:#444; }
 .product-options dd { padding:5px 10px 15px; margin:0 0 5px; }
-.product-options dl {border: 1px solid #DDDDDD; border-radius: 4px 4px 4px 4px; margin-bottom: 20px; padding: 10px; margin-left:338px; width: 380px;  }
+.product-options dl {border: 1px solid #DDDDDD; border-radius: 4px 4px 4px 4px; margin-bottom: 20px; padding: 10px; margin-left:338px; width: 363px;  }
 #product-options-wrapper { z-index:1;}
 .product-options .product-specs dl {  width: 723px; margin-left:0; margin-top:20px; }
 .product-options dl.last div {}
@@ -1270,9 +1274,56 @@ tr.summary-details-excluded { font-style:italic; }
 .cms-home .page-title {display:none;}
 .cms-home .col-right { float:none; width:992px; padding:0; }
 .cms-home .col-main { float:none; width:992px; padding:0 0 15px; }
-.cms-home .col-main .teaserSmall .widget { background-color: white; float: left; margin-bottom:15px; padding: 25px 25px 8px; position: relative; width: 422px;}
+.cms-home .col-main .teaserSmall .widget { background-color: white; float: left; margin-bottom:15px; padding: 25px 25px 8px; position: relative; width: 422px; text-align: left;}
 .cms-home .col-main .teaserBig {  background-color: white; clear:both; margin-bottom: 15px; padding:25px 25px 10px;}
 .cms-home .col-main .teaserBig p {  background-color: white; }
+.cms-home .col-main .std {text-align: center;}
+.cms-home .col-main .std ul.products-grid {list-style:none;padding-left:0;}
+.cms-home .col-main .std ul.products-grid button.button {padding:2px}
+.cms-home .col-main .std ul.products-grid li {
+    background: -moz-linear-gradient(center top , #FFFFFF 5%, #F3F3F3 100%) repeat scroll 0 0 #FFFFFF;
+    margin: 0 5px 0 0;
+    padding: 30px 0 10px;
+    text-align: center;
+    width: 240px;
+}
+.cms-home .col-main .std ul.products-grid {
+    position: relative;
+    top:-14px;
+}
+.cms-home .col-main .std ul.products-grid .product-name {
+    margin: 20px 0 6px;
+}
+.cms-home .col-main .std ul.products-grid li a { margin:0 auto; }
+
+.cms-home .col-main .std  .slideShowHome #navPager {
+    display:none;
+}
+.cms-home .col-main .std  .slideShowHome #prev {
+    background-image: url("../images/slider-left.png");
+}
+.cms-home .col-main .std  .slideShowHome #next {
+    background-image: url("../images/slider-right.png");
+    margin-left:938px;
+}
+.cms-home .col-main .std  .slideShowHome #prev, .cms-home .col-main .std  .slideShowHome #next {
+    height: 126px;
+    position: absolute;
+    margin-top:120px;
+    width: 37px;
+    z-index: 100;
+    cursor: pointer;
+}
+.cms-home .col-main .std .teasersSmallHeader {
+    font-family: 'Volkhov',serif;
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    width: 975px;
+}
+.cms-home .col-main .std  .slideShowHome img {
+    width: 975px;
+}
 
 .cms-index-index .subtitle {}
 .cms-home .col2-right-layout .products-grid { width:992px; margin:0 auto; }
