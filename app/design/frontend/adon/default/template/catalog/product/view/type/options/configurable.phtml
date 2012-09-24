@@ -28,9 +28,24 @@
 <?php
 $_product    = $this->getProduct();
 $_attributes = Mage::helper('core')->decorateArray($this->getAllowAttributes());
+
+//$productSku = $_product->getSku();
+//$product = Mage::getModel('catalog/product');
+//$productId = $product->getIdBySku( $productSku );
+//$product = Mage::getModel("catalog/product")->load($productId);
+//$attVal = $product->getOptions(); 
+//$optStr = "";
 ?>
 <?php if ($_product->isSaleable() && count($_attributes)):?>
     <dl>
+        <?php // loop through the options
+//foreach($attVal as $optionKey => $optionVal) {
+ //if($optionVal->getTitle() == 'Pantone Farbwert') {
+  //   $optStr .= "<dt><label>Pantone Farbwert</label></dt><dd><input id='options[".$optionVal->getId()."]' class='input-text validate-length maximum-length-10 product-custom-option' type='text' value='' name='options[".$optionVal->getId()."]'></input><p class='note'>Maximale Anzahl von Ziffern oder Zeichen: <strong>10</strong></p></dd>";
+// }
+//}
+//echo($optStr ); 
+?>
     <?php foreach($_attributes as $_attribute): ?>
         <dt><label class="required"><em>*</em><?php echo $_attribute->getLabel() ?></label></dt>
         <dd<?php if ($_attribute->decoratedIsLast){?> class="last"<?php }?>>
@@ -38,10 +53,12 @@ $_attributes = Mage::helper('core')->decorateArray($this->getAllowAttributes());
                 <select name="super_attribute[<?php echo $_attribute->getAttributeId() ?>]" id="attribute<?php echo $_attribute->getAttributeId() ?>" class="required-entry super-attribute-select">
                     <option><?php echo $this->__('Choose an Option...') ?></option>
                   </select>
+					
               </div>
         </dd>
     <?php endforeach; ?>
     </dl>
+<dl><dt><label for="pantoneval">Farbwert</label></dt><dd><div class="input-box"><input type="text" class="input-text" title="Pantone value" value="" maxlength="12" id="pantoneval" name="pantoneval"></div></dd></dl>
     <script type="text/javascript">
         var spConfig = new Product.Config(<?php echo $this->getJsonConfig() ?>);
     </script>

@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Amasty_Paction>
-            <active>true</active>
+            <active>false</active>
             <codePool>local</codePool>
         </Amasty_Paction>
     </modules>

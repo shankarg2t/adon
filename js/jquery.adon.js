@@ -43,7 +43,7 @@ $j(document).ready(function(){
         function(){
             $j(this).removeClass('itemHover');
         });
-    }); 
+    });   
 });
 
 
