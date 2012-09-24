@@ -31,14 +31,15 @@
  */
 
 ?>
-<?php if ($this->getIsNeedToDisplaySideBar()):?>
+<?php $_cartQty = $this->getSummaryCount() ?>
+<?php if ($this->getIsNeedToDisplaySideBar() && $_cartQty>0):?>
 <div class="block block-cart">
-    <?php $_cartQty = $this->getSummaryCount() ?>
+    
     <div class="block-title">
         <strong><span><?php echo $this->__('My Cart') ?></span></strong>
     </div>
     <div class="block-content">
-    <?php if ($_cartQty>0): ?>
+
         <div class="summary">
             <?php if ($_cartQty==1): ?>
                 <p class="amount"><?php echo $this->__('There is <a href="%s">1 item</a> in your cart.', $this->getUrl('checkout/cart')) ?></p>
@@ -56,14 +57,14 @@
                 <?php endif; ?>
             </p>
         </div>
-    <?php endif ?>
+
     <?php if($_cartQty && $this->isPossibleOnepageCheckout()): ?>
     <div class="actions">
         <?php echo $this->getChildHtml('extra_actions') ?>
         <button type="button" title="<?php echo $this->__('Checkout') ?>" class="button" onclick="setLocation('<?php echo $this->getCheckoutUrl() ?>')"><span><span><?php echo $this->__('Checkout') ?></span></span></button>
     </div>
     <?php endif ?>
-    <?php $_items = $this->getRecentItems() ?>
+    <?php //$_items = $this->getRecentItems() ?>
     <?php if(count($_items)): ?>
         <p class="block-subtitle"><?php echo $this->__('Recently added item(s)') ?></p>
         <ol id="cart-sidebar" class="mini-products-list">
@@ -72,9 +73,9 @@
         <?php endforeach; ?>
         </ol>
         <script type="text/javascript">decorateList('cart-sidebar', 'none-recursive')</script>
-    <?php else: ?>
-        <p class="empty"><?php echo $this->__('You have no items in your shopping cart.') ?></p>
-    <?php endif ?>
+   <!-- <?php //else: ?>
+        <p class="empty"><?php //echo $this->__('You have no items in your shopping cart.') ?></p>-->
+    <?php endif ?> 
     </div>
 </div>
 <?php endif;?>
