@@ -39,6 +39,7 @@ Default layout, loads most of the pages
                 <action method="addJs"><script>jquery.cycle.all.min.js</script></action>
                 <action method="addJs"><script>zoom/jquery.zoom.js</script></action>
                 <action method="addJs"><script>jquery.adon.js</script></action>
+                <action method="addJs"><script>cjm/colorselectorplus/colorselected.js</script></action>    
                 <action method="addJs"><script>prototype/prototype.js</script></action>
                 <action method="addJs"><script>lib/ccard.js</script></action>
                 <action method="addJs"><script>prototype/validation.js</script></action>
@@ -58,6 +59,7 @@ Default layout, loads most of the pages
                 <action method="addCss"><stylesheet>css/prettyPhoto.css</stylesheet></action>
                 <action method="addItem"><type>skin_css</type><name>css/styles-ie.css</name><params/><if>lt IE 8</if></action>
                 <action method="addCss"><stylesheet>css/widgets.css</stylesheet></action>
+                <action method="addCss"><stylesheet>css/swatches.css</stylesheet></action>
                 <action method="addCss"><stylesheet>css/print.css</stylesheet><params>media="print"</params></action>
                 
 
