@@ -47,8 +47,10 @@
                 <?php $_filters = $this->getFilters() ?>
                 <?php foreach ($_filters as $_filter): ?>
                 <?php if($_filter->getItemsCount()): ?>
+                
                     <dt><?php echo $this->__($_filter->getName()) ?></dt>
-                    <dd><?php echo $_filter->getHtml() ?></dd>
+                    <dd <?php if($_filter->getName() == 'Farbe'): ?>id="farbeNavList"<?php endif; ?>><?php echo $_filter->getHtml() ?><?php if($_filter->getName() == 'Farbe'): ?><div style='clear:both'></div><?php endif; ?></dd>
+                    
                 <?php endif; ?>
                 <?php endforeach; ?>
             </dl>
