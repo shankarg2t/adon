@@ -890,11 +890,13 @@ tr.summary-details-excluded { font-style:italic; }
 /* View Type: Grid */
 .products-grid { position:relative; }
 .products-grid.last { border-bottom:0; }
-.products-grid li.item { float:left; width:161px; padding:0 9px; height:235px; overflow:hidden; }
+.products-grid li.item { float:left; width:161px; padding:0 9px; overflow:hidden; }
+.category-cd-dvd-blueray-rohlinge-cd-r .products-grid li.item {   }
 .products-grid li.item { z-index:999 }
 .products-grid li.itemHover { float:left; width:161px; padding:0 9px;  }
 .products-grid li.itemHover a, .products-grid li.itemHover h2, .products-grid li.itemHover .price-box  { z-index:999; position: relative; }
-.products-grid li.itemHover .actions{ z-index:1; position:absolute; margin:-255px 0 0 -30px; z-index: 1; background-color: white; padding:20px 20px 0; height:390px; width: 180px; box-shadow: 0 0 10px 0 rgba(173, 173, 173, 0.75);}
+.products-grid li.itemHover .actions{ z-index:1; position:absolute; margin:-255px 0 0 -30px; z-index: 1; background-color: white; padding:20px 20px 0; height:360px; width: 180px; box-shadow: 0 0 10px 0 rgba(173, 173, 173, 0.75);}
+.category-cd-dvd-blueray-rohlinge-cd-r .products-grid li.itemHover .actions{ margin:-275px 0 0 -30px; height:340px; padding:45px 20px 0; }
 .products-grid li.itemHover .actions button.button{ margin-top:235px}
 .products-grid li.itemHover .actions button.button, .products-grid li.itemHover .actions ul { margin-left:13px}
 
@@ -913,7 +915,7 @@ tr.summary-details-excluded { font-style:italic; }
 .products-grid .price-box { margin:5px 0; }
 .category-products .products-grid .price-box .regular-price .notax { display:none; }
 .products-grid .availability { line-height:21px; }
-.products-grid .actions { text-align:center;  }
+.products-grid .actions { text-align:center; display: none;  }
 .col2-left-layout .products-grid,
 .col2-right-layout .products-grid { width:723px; margin:0 auto 40px; }
 .col1-layout .products-grid,
@@ -1105,7 +1107,8 @@ tr.summary-details-excluded { font-style:italic; }
 /* Product Images */
 .product-view .product-img-box {  }
 .col3-layout .product-view .product-img-box { float:none; margin:0 auto; }
-.product-view .product-img-box .product-image { margin:0 0 10px; }
+.product-view .product-img-box .product-image {margin: 0 0 10px;}
+.category-cd-dvd-blueray-rohlinge-cd-r .product-view .product-img-box>.product-image { margin: 0 0 0 -345px; position: absolute; top: 251px; width: 300px; } 
 .product-view .product-img-box .product-image-zoom-cont {margin: 0 0 0 -345px; position: absolute; top: 251px; width: 300px;}
 .product-view .product-img-box .product-image-zoom-cont .zoom {display: none;}
 .product-view .product-img-box .printarea-scheme {margin: 0 0 0 -345px; position: absolute; top: 651px; width: 300px;}
@@ -1156,7 +1159,7 @@ tr.summary-details-excluded { font-style:italic; }
 .product-options dd .qty-holder { display:block; padding:10px 0 0; }
 .product-options dd .qty-holder label { vertical-align:middle; }
 .product-options dd .qty-disabled { background:none; border:0; padding:3px; color:#444; }
-.product-options dd { padding:5px 10px 15px; margin:0 0 5px; }
+.product-options dd { padding:5px 10px 0; margin:0 0 5px; }
 .product-options dl {border: 1px solid #DDDDDD; border-radius: 4px 4px 4px 4px; margin: 20px 0 20px 344px; padding: 10px; width: 358px;  }
 #product-options-wrapper { z-index:1;}
 .product-options .product-specs dl {  width: 723px; margin-left:0; margin-top:20px; }
