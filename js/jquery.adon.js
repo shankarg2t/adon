@@ -39,9 +39,11 @@ $j(document).ready(function(){
     $j(function() {
         $j('.products-grid li.item').hover( function(){
             $j(this).addClass('itemHover');
+            $j(this).children(".actions").show();
         },
         function(){
             $j(this).removeClass('itemHover');
+             $j(this).children(".actions").hide();
         });
     });   
 });
