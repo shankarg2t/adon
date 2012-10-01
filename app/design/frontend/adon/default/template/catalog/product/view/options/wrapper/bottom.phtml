@@ -24,6 +24,13 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
+<div class="clearer"></div>
+<?php echo $this->getChildHtml('info_tabs');?>
 <div class="product-options-bottom">
-    <?php echo $this->getChildHtml('', true, true);?>
+    
+    <?php echo $this->getChildHtml('prices', true, true);?>
+    <?php echo $this->getChildHtml('addtocart', true, true);?>
+    <?php echo $this->getChildHtml('addto', true, true);?>
+    
+    <?php //echo $this->getChildHtml('', true, true);?>
 </div>

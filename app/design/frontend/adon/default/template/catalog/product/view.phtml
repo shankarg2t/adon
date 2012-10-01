@@ -78,7 +78,7 @@
                     <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
                 </div>
             <?php endif;?>
-
+            <div class="adonspec"><?php echo $this->getChildHtml('adonspecs') ?></div>
             <?php echo $this->getChildHtml('other');?>
             <?php if ($_product->isSaleable() && $this->hasOptions()):?>
                 <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
@@ -89,8 +89,6 @@
         <div class="product-img-box">
             <?php echo $this->getChildHtml('media') ?>
         </div>
-
-        <div class="clearer"></div>
         <?php if ($_product->isSaleable() && $this->hasOptions()):?>
             <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
         <?php endif;?>
@@ -147,9 +145,10 @@
     //]]>
     </script>
     </div>
-
+    <div class="upsell"><?php echo $this->getChildHtml('upsell') ?></div>
+    <!--
     <div class="product-collateral">
-        <?php echo $this->getChildHtml('info_tabs') ?>
-        <?php echo $this->getChildHtml('product_additional_data') ?>
-    </div>
+        <?php // echo $this->getChildHtml('info_tabs') ?>
+        <?php // echo $this->getChildHtml('product_additional_data') ?>
+    </div> -->
 </div>
