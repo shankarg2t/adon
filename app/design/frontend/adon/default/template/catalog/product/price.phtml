@@ -60,7 +60,7 @@
         <?php $_attributes = $_weeeHelper->getProductWeeeAttributesForRenderer($_product, null, null, null, true); ?>
         <?php $_weeeTaxAmountInclTaxes = $_weeeHelper->getAmountInclTaxes($_attributes); ?>
     <?php endif; ?>
-
+<div class="addtoBarBg"></div>
     <div class="price-box">
     <?php $_price = $_taxHelper->getPrice($_product, $_product->getPrice()) ?>
     <?php $_regularPrice = $_taxHelper->getPrice($_product, $_product->getPrice(), $_simplePricesTax) ?>
