@@ -1095,7 +1095,7 @@ tr.summary-details-excluded { font-style:italic; }
 .add-to-box .add-to-links li .separator { display:none !important; }
 
 
-.product-view {}
+.product-view .upsell {margin-top:25px;}
 
 .product-essential { padding:0; }
 .product-essential h2 { font:bold 12px/1.25 Arial, Helvetica, sans-serif; }

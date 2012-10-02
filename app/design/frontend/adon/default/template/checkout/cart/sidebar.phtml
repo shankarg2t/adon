@@ -65,17 +65,17 @@
     </div>
     <?php endif ?>
     <?php //$_items = $this->getRecentItems() ?>
-    <?php if(count($_items)): ?>
-        <p class="block-subtitle"><?php echo $this->__('Recently added item(s)') ?></p>
+    <?php //if(count($_items)): ?>
+        <!-- <p class="block-subtitle"><?php //echo $this->__('Recently added item(s)') ?></p>
         <ol id="cart-sidebar" class="mini-products-list">
-        <?php foreach($_items as $_item): ?>
-            <?php echo $this->getItemHtml($_item) ?>
-        <?php endforeach; ?>
+        <?php //foreach($_items as $_item): ?>
+            <?php //echo $this->getItemHtml($_item) ?>
+        <?php //endforeach; ?>
         </ol>
         <script type="text/javascript">decorateList('cart-sidebar', 'none-recursive')</script>
-   <!-- <?php //else: ?>
+    <?php //else: ?>
         <p class="empty"><?php //echo $this->__('You have no items in your shopping cart.') ?></p>-->
-    <?php endif ?> 
+    <?php //endif ?> 
     </div>
 </div>
 <?php endif;?>
