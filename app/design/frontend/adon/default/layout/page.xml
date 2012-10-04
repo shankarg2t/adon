@@ -37,6 +37,7 @@ Default layout, loads most of the pages
             <block type="page/html_head" name="head" as="head">
                 <action method="addJs"><script>jquery.prettyPhoto.js</script></action>
                 <action method="addJs"><script>jquery.cycle.all.min.js</script></action>
+                <action method="addJs"><script>jquery.easytabs.min.js</script></action>
                 <action method="addJs"><script>zoom/jquery.zoom.js</script></action>
                 <action method="addJs"><script>jquery.adon.js</script></action>
                 <action method="addJs"><script>cjm/colorselectorplus/colorselected.js</script></action>    

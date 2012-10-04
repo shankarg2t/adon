@@ -45,7 +45,11 @@ $j(document).ready(function(){
             $j(this).removeClass('itemHover');
              $j(this).children(".actions").hide();
         });
-    });   
+    });
+    $j('#easyCustomOptionsTabs').easytabs({
+        animate: false,
+        defaultTab: "#tab0"
+    });
 });
 
 
