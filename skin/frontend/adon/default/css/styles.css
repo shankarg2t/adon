@@ -1994,7 +1994,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 
 /* Red Button */
-.redButton {
+.redButton, .customOptionsTabs .active a {
     color:#fff;
     text-shadow:1px 1px 0px #b23e35;
     border:1px solid #d83526;
@@ -2003,7 +2003,7 @@ tr.summary-details-excluded { font-style:italic; }
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3300', endColorstr='#d51800');
     background-color:#ff3300;
 }
-.redButton:hover { 
+.redButton:hover, .customOptionsTabs .active a:hover { 
     background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #d51800), color-stop(1, #a81402) );
     background:-moz-linear-gradient( center top, #d51800 5%, #a81402 100% );
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d51800', endColorstr='#a81402');
@@ -2145,3 +2145,31 @@ tr.summary-details-excluded { font-style:italic; }
     }
     #ex2 img:hover { cursor: url(/zoom/grab.cur), default; }
     #ex2 img:active { cursor: url(/zoom/grabbed.cur), default; }
+    
+/* easytabs */
+.custom-options {margin:10px 0 0}
+    .customOptionsTab { display: inline-block; zoom:1; *display:inline;  }
+    .customOptionsTab a {  text-decoration: none; }
+    .customOptionsTab a:hover {text-decoration: none;   }
+
+    #easyCustomOptionsPanel dt label {
+        display:none;
+    }
+    #easyCustomOptionsPanel #customOptionsTabPers dt label {
+        display:block;
+    }
+    #easyCustomOptionsPanel dd ul li a {
+        text-decoration: none;
+        margin-left:10px;
+    }
+    #easyCustomOptionsPanel dd ul li span.label {
+        margin-left:10px;
+    }
+    #easyCustomOptionsPanel div {
+        margin-bottom:20px;
+    }
+    #easyCustomOptionsTabs .customOptionsTab {
+        margin-right: 10px;
+    }
+    
+    

@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    Inchoo
+ * @package     Inchoo_Logger
+ * @author      Branko Ajzele, ajzele@gmail.com
+ * @copyright   Copyright (c) Inchoo
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config>
+    <modules>
+        <Inchoo_Logger>
+            <version>1.0.0.0</version>
+        </Inchoo_Logger>
+    </modules>
+    
+    <global>    
+        <models>
+            <inchoo_logger>
+                <class>Inchoo_Logger_Model</class>
+                <resourceModel>inchoo_logger_mysql4</resourceModel>
+            </inchoo_logger>
+        
+            <inchoo_logger_mysql4>
+                <class>Inchoo_Logger_Model_Mysql4</class>
+                <entities>
+                    <log>
+                        <table>inchoo_logger_log</table>
+                    </log>
+                </entities>
+            </inchoo_logger_mysql4>
+        </models>
+        <resources>
+            <inchoo_logger_setup>
+                <setup>
+                    <module>Inchoo_Logger</module>
+                </setup>
+            </inchoo_logger_setup>
+        </resources>        
+        <blocks>
+            <inchoo_logger>
+                <class>Inchoo_Logger_Block</class>
+            </inchoo_logger>
+        </blocks>
+        <helpers>
+            <inchoo_logger>
+                <class>Inchoo_Logger_Helper</class>
+            </inchoo_logger>
+        </helpers>
+        
+        <events>
+            <controller_action_predispatch>
+                <observers>
+                    <logger_controller_action_predispatch>
+                        <class>inchoo_logger/observer</class>
+                        <method>log</method>
+                    </logger_controller_action_predispatch>
+                </observers>
+            </controller_action_predispatch>
+        </events>        
+        
+    </global>
+
+    <admin>
+        <routers>
+             <adminhtml>
+                 <args>
+                     <modules>
+                         <inchoo_logger after="Mage_Adminhtml">Inchoo_Logger_Adminhtml</inchoo_logger>
+                     </modules>
+                 </args>
+             </adminhtml>
+        </routers>
+    </admin>
+
+    <adminhtml>
+        <events>
+            <controller_action_layout_generate_blocks_before>
+                <observers>
+                    <logger_controller_action_layout_generate_blocks_before>
+                        <class>inchoo_logger/observer</class>
+                        <method>layoutUpdate</method>
+                    </logger_controller_action_layout_generate_blocks_before>
+                </observers>
+            </controller_action_layout_generate_blocks_before>
+        </events>         
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <inchoo_logger>
+                                    <title>Inchoo Logger</title>
+                                </inchoo_logger>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+        <translate>
+            <modules>
+                <Inchoo_Logger>
+                    <files>
+                        <default>Inchoo_Logger.csv</default>
+                    </files>
+                </Inchoo_Logger>
+            </modules>
+        </translate>
+    </adminhtml>
+    
+</config>
