@@ -2168,5 +2168,8 @@ tr.summary-details-excluded { font-style:italic; }
     #easyCustomOptionsPanel div {
         margin-bottom:20px;
     }
+    #easyCustomOptionsTabs .customOptionsTab {
+        margin-right: 10px;
+    }
     
     
