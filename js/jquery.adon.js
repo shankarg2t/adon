@@ -43,13 +43,25 @@ $j(document).ready(function(){
         },
         function(){
             $j(this).removeClass('itemHover');
-             $j(this).children(".actions").hide();
+            $j(this).children(".actions").hide();
         });
     });
     $j('#easyCustomOptionsTabs').easytabs({
         animate: false,
         defaultTab: "#tab0"
     });
+    /* custom option radio button delete function */
+    jQuery('.product-custom-option:radio').bind('click', function(e) { 
+        jQuery('.disable-product-custom-option').remove();
+        jQuery(this).parent().append('<span class="disable-product-custom-option">x</span>');
+    });
+    jQuery('.disable-product-custom-option').live('click', function(e) { 
+        jQuery(this).parent().find('input:radio').prop('checked', false);
+        jQuery(this).remove();
+    });
+
+
+  
 });
 
 
