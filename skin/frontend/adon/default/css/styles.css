@@ -837,10 +837,11 @@ tr.summary-details-excluded { font-style:italic; }
 .block-compare .block-content {
     padding: 4px 10px 8px!important;
 }
-.block-compare button.button {
+.block-compare button.greyButton {
     margin:10px 21px;
+    cursor:pointer;
 }
-.block-compare button.button span span {
+.block-compare button.greyButton span span {
     padding: 2px 20px;
 }
 .block-compare .block-title span small {

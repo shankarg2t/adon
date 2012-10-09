@@ -508,7 +508,7 @@ class CJM_ColorSelectorPlus_Helper_Data extends Mage_Core_Helper_Abstract
 		foreach ($_color_swatch as $key => $val) { 
    			 $sortSingle[$key] = $_color_swatch[$key]['order']; } 
 
-		asort ($sortSingle); 
+		rsort ($sortSingle); 
 		reset ($sortSingle); 
 		
 		while (list ($singleKey, $singleVal) = each ($sortSingle)) { 

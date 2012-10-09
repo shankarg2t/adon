@@ -52,7 +52,7 @@ $j(document).ready(function(){
     });
     /* custom option radio button delete function */
     jQuery('.product-custom-option:radio').bind('click', function(e) { 
-        jQuery('.disable-product-custom-option').remove();
+        jQuery(this).parent().parent().parent().find('.disable-product-custom-option').remove();
         jQuery(this).parent().append('<span class="disable-product-custom-option">x</span>');
     });
     jQuery('.disable-product-custom-option').live('click', function(e) { 
