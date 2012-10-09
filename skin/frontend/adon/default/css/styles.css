@@ -526,14 +526,14 @@ tr.summary-details-excluded { font-style:italic; }
 .logo { float:left; }
 .header-container {margin-right:16px;}
 
-.header { margin:0 0 80px; padding: 0 0 11px; background: url("../images/navi-line.png") repeat-x scroll center bottom transparent; }
-.header .logo { float:left; text-decoration:none !important;margin-top:10px; }
+.header { margin:0 0 60px; padding: 0 0 11px; background: url("../images/navi-line.png") repeat-x scroll center bottom transparent; position:relative; top:-9px; }
+.header .logo { float:left; text-decoration:none !important; }
 .header .logo strong { position:absolute; top:-999em; left:-999em; width:0; height:0; font-size:0; line-height:0; text-indent:-999em; overflow:hidden; }
 
 .header .top-promo { float:left; width:117px; height:30px; margin:12px 10px 0; background:url(../images/bkg_top-promo.gif) 0 0 no-repeat; text-indent:-999em; overflow:hidden; }
 
 .quick-access { text-align:right; list-style-type: none; padding: 0; margin: 0; }
-.quick-access .welcome-msg { display:inline; margin:0; color:#000; position: absolute; margin:40px 0 0 481px; }
+.quick-access .welcome-msg { display:inline; color:#000; position: relative; top:15px; }
 .quick-access .welcome-msg a { color:#ddd; }
 
 .quick-access .form-language-cont {
@@ -629,7 +629,7 @@ tr.summary-details-excluded { font-style:italic; }
 .header-container .top-container { padding:5px 12px; background:#fff; border:1px solid #bbb; border-width:0 1px 1px; text-align:right; }
 
 /********** < Navigation */
-.nav-container {padding-top:50px;}
+.nav-container {padding-top:38px;}
 
 .headerlogos {
     left: -180px;
@@ -1017,7 +1017,7 @@ tr.summary-details-excluded { font-style:italic; }
 .minimal-price { margin:0; }
 .minimal-price .price-label { font-size:12px; font-weight:bold; white-space:nowrap; }
 
-.minimal-price-link { display:block; font-size:12px; text-decoration:underline; color:#444; }
+.minimal-price-link { display:none; font-size:12px; text-decoration:underline; color:#444; }
 .minimal-price-link .label {color:#444;}
 .minimal-price-link .price { font-weight:normal; color:#444; }
 
@@ -1072,9 +1072,10 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Tier Prices */
 .product-pricing,
-.tier-prices { margin:10px 0; padding:10px; background:#f4f9ea; border:1px solid #ddd; }
+.tier-prices { background-color: white;
+    padding: 5px 10px; }
 .tier-prices .benefit { font-style:italic; font-weight:bold; }
-.tier-prices .price { font-weight:bold;; }
+.tier-prices .price { font-weight:bold; }
 
 .tier-prices-grouped li .price { font-weight:bold; }
 
