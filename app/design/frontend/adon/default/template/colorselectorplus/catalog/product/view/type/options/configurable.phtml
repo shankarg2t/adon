@@ -15,7 +15,7 @@ $hide = Mage::getStoreConfig('color_selector_plus/colorselectorplusgeneral/hided
 				<?php $attributeId = $_attribute->getAttributeId(); ?>
        			<dt>
        				<label class="required"><em>*</em><?php echo $_attribute->getLabel() ?></label>
-       				<?php if ($hide == 1){?> - <label id="divattribute<?php echo $attributeId ?>" class="swatchLabel"><?php echo $title ?></label><?php }?>
+       				<?php if ($hide == 1){?> <label id="divattribute<?php echo $attributeId ?>" class="swatchLabel"><?php echo $title ?></label><?php }?>
        			</dt>
        			<dd<?php if ($_attribute->decoratedIsLast){?> class="last"<?php }?>>
                 	<div class="input-box">
