@@ -29,13 +29,14 @@
 ?>
 <div class="header-container">
     <div class="quick-access">
-        <p class="welcome-msg"><?php echo $this->getWelcome()?></p>
         <div class="form-language-cont">
             <div class="form-language-left-bor">&nbsp;</div>
             <?php echo $this->getChildHtml('store_language') ?>
         </div>
         <?php echo $this->getChildHtml('topBar') ?>
         <?php echo $this->getChildHtml('topLinks') ?>
+        <div style="clear:both;height:1px"></div>
+        <p class="welcome-msg"><?php echo $this->getWelcome()?></p>
         
     </div>
     <div class="header">

@@ -41,6 +41,7 @@
             <?php else:?>
                 <?php echo nl2br($this->htmlEscape($_a->getContent())) ?>
             <?php endif; ?>
+            <a href="<?php echo $this->getBaseUrl(); ?>media/AGB_Adon.pdf" title="AGB" target="_blank">AGB's im PDF Format</a><br><br>
         </div>
         <p class="agree">
             <input type="checkbox" id="agreement-<?php echo $_a->getId()?>" name="agreement[<?php echo $_a->getId()?>]" value="1" title="<?php echo $this->htmlEscape($_a->getCheckboxText()) ?>" class="checkbox" /><label for="agreement-<?php echo $_a->getId()?>"><?php echo $_a->getIsHtml() ? $_a->getCheckboxText() : $this->htmlEscape($_a->getCheckboxText()) ?></label>

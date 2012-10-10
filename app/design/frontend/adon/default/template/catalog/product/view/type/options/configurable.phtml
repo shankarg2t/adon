@@ -26,7 +26,7 @@
 ?>
 
 <?php
-$_product    = $this->getProduct();
+$_product = $this->getProduct();
 $_attributes = Mage::helper('core')->decorateArray($this->getAllowAttributes());
 $swatch_attributes = Mage::helper('colorselectorplus')->getSwatchAttributes();
 $title = Mage::getStoreConfig('color_selector_plus/colorselectorplusgeneral/title', Mage::app()->getStore());
@@ -40,49 +40,98 @@ $hide = Mage::getStoreConfig('color_selector_plus/colorselectorplusgeneral/hided
 //$optStr = "";
 ?>
 
-        <?php // loop through the options
+<?php
+// loop through the options
 //foreach($attVal as $optionKey => $optionVal) {
- //if($optionVal->getTitle() == 'Pantone Farbwert') {
-  //   $optStr .= "<dt><label>Pantone Farbwert</label></dt><dd><input id='options[".$optionVal->getId()."]' class='input-text validate-length maximum-length-10 product-custom-option' type='text' value='' name='options[".$optionVal->getId()."]'></input><p class='note'>Maximale Anzahl von Ziffern oder Zeichen: <strong>10</strong></p></dd>";
+//if($optionVal->getTitle() == 'Pantone Farbwert') {
+//   $optStr .= "<dt><label>Pantone Farbwert</label></dt><dd><input id='options[".$optionVal->getId()."]' class='input-text validate-length maximum-length-10 product-custom-option' type='text' value='' name='options[".$optionVal->getId()."]'></input><p class='note'>Maximale Anzahl von Ziffern oder Zeichen: <strong>10</strong></p></dd>";
 // }
 //}
 //echo($optStr ); 
 ?>
     <?php if ($_product->isSaleable() && count($_attributes)): ?>
     <dl>
-    	<?php foreach($_attributes as $_attribute): ?>
-			<?php $_productAttribute = $_attribute->getProductAttribute(); ?>
-			
-			<?php if(in_array($_productAttribute->getAttributeCode(), $swatch_attributes)): ?>
-				<?php $attributeId = $_attribute->getAttributeId(); ?>
-       			<dt>
-       				<label class="required"><em>*</em><?php echo $_attribute->getLabel() ?></label>
-       				<?php if ($hide == 1){?> - <label id="divattribute<?php echo $attributeId ?>" class="swatchLabel"><?php echo $title ?></label><?php }?>
-       			</dt>
-       			<dd<?php if ($_attribute->decoratedIsLast){?> class="last"<?php }?>>
-                	<div class="input-box">
-                	<select name="super_attribute[<?php echo $attributeId ?>]" id="attribute<?php echo $attributeId ?>" class="required-entry super-attribute-select<?php if($hide == 1) echo ' swatchSelect' ?>">
-                   		<option><?php echo $this->__('Choose an Option...') ?></option>
-               		</select>
-               		</div>
-					<?php echo Mage::helper('colorselectorplus')->getSwatchHtml($_productAttribute->getAttributeCode(), $attributeId, $_product); ?>
-              	</dd>
-     		<?php else: ?>
-        		<dt><label class="required"><em>*</em><?php echo $_attribute->getLabel() ?></label></dt>
-        		<dd<?php if ($_attribute->decoratedIsLast){?> class="last"<?php }?>>
-            		<div class="input-box">
-                		<select name="super_attribute[<?php echo $_attribute->getAttributeId() ?>]" id="attribute<?php echo $_attribute->getAttributeId() ?>" class="required-entry super-attribute-select">
-                    		<option><?php echo $this->__('Choose an Option...') ?></option>
-                  		</select>
-              		</div></dd>
-   			<?php endif; ?>
-    	
-    	<?php endforeach; ?>
-    	
+        <?php foreach ($_attributes as $_attribute): ?>
+            <?php $_productAttribute = $_attribute->getProductAttribute(); ?>
+
+            <?php if (in_array($_productAttribute->getAttributeCode(), $swatch_attributes)): ?>
+            <?php $attributeId = $_attribute->getAttributeId(); ?>
+                <dt>
+                <label class="required"><em>*</em><?php echo $_attribute->getLabel() ?></label>
+            <?php if ($hide == 1) { ?> <label id="divattribute<?php echo $attributeId ?>" class="swatchLabel"><?php echo $title ?></label><?php } ?>
+                </dt>
+                <dd<?php if ($_attribute->decoratedIsLast) { ?> class="last"<?php } ?>>
+                    <div class="input-box">
+                        <select name="super_attribute[<?php echo $attributeId ?>]" id="attribute<?php echo $attributeId ?>" class="required-entry super-attribute-select<?php if ($hide == 1) echo ' swatchSelect' ?>">
+                            <option><?php echo $this->__('Choose an Option...') ?></option>
+                        </select>
+                    </div>
+                <?php echo Mage::helper('colorselectorplus')->getSwatchHtml($_productAttribute->getAttributeCode(), $attributeId, $_product); ?>
+                </dd>
+        <?php else: ?>
+                <dt><label class="required"><em>*</em><?php echo $_attribute->getLabel() ?></label></dt>
+                <dd<?php if ($_attribute->decoratedIsLast) { ?> class="last"<?php } ?>>
+                    <div class="input-box">
+                        <select name="super_attribute[<?php echo $_attribute->getAttributeId() ?>]" id="attribute<?php echo $_attribute->getAttributeId() ?>" class="required-entry super-attribute-select">
+                            <option><?php echo $this->__('Choose an Option...') ?></option>
+                        </select>
+                    </div></dd>
+            <?php endif; ?>
+
+    <?php endforeach; ?>
+
     </dl><div class="float-clearer">&nbsp;</div>
-    
-	<script type="text/javascript">
-		var spConfig = new Product.Config(<?php echo $this->getJsonConfig() ?>);
-		var selecttitle = '<?php echo $title ?>';
+
+    <script type="text/javascript">
+        var spConfig = new Product.Config(<?php echo $this->getJsonConfig() ?>);
+                    
+                    
+                    
+                    
+                    
+        //we create new function
+        spConfig.setInitialState = function(dropdown_id)
+        {
+            //select dropdown
+            var dropdown = $(dropdown_id);
+            
+            //remove empty option from dropdown so it is not selectable after initial selection
+            dropdown[0].remove();
+            //change selections in dropdowns
+            //if(dropdown_id == 'attribute143') {index = 2 } else {index = 0}
+            for(index = 0; index < dropdown.length; index++)
+            {
+                if(dropdown[index].value != "")
+                {
+                    dropdown.selectedIndex = index;
+                    var element = dropdown;
+                    var event = 'change';
+                    //fire events
+                    if(document.createEventObject)
+                    {
+                        var evt = document.createEventObject();
+                        return element.fireEvent('on'+event,evt)
+                    }
+                    else
+                    {
+                        var evt = document.createEvent("HTMLEvents");
+                        evt.initEvent(event, true, true );
+                        return !element.dispatchEvent(evt);
+                    }
+                }
+            } 
+        };
+    <?php foreach ($_attributes as $_attribute): ?>
+    spConfig.setInitialState("attribute<?php echo $_attribute->getAttributeId() ?>")
+    <?php endforeach; ?>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+    var selecttitle = '<?php echo $title ?>';
     </script>
-<?php endif;
+    <?php
+ endif;
