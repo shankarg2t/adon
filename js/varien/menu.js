@@ -79,21 +79,13 @@ var mainNav = function() {
         fireNavEvent :  function(elm,ev) {
             if(ev){
                 elm.addClassName("over");
-<<<<<<< HEAD
-                elm.down("a").addClassName("over");
-=======
                 // elm.down("a").addClassName("over");
->>>>>>> 7e1107609c450b6b15c65b200c2cf826ea471d3b
                 if (elm.childElements()[1]) {
                     main.show(elm.childElements()[1]);
                 }
             } else {
                 elm.removeClassName("over");
-<<<<<<< HEAD
-                elm.down("a").removeClassName("over");
-=======
                 // elm.down("a").removeClassName("over");
->>>>>>> 7e1107609c450b6b15c65b200c2cf826ea471d3b
                 if (elm.childElements()[1]) {
                     main.hide(elm.childElements()[1]);
                 }
