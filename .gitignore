@@ -54,7 +54,6 @@ js/prototype/
 js/scriptaculous/
 js/spacer.gif
 js/tiny_mce/
-js/varien/
 lib/3Dsecure/
 lib/flex/
 lib/googlecheckout/
@@ -100,3 +99,14 @@ var/
 
 /media/wysiwyg/.thumbs/
 .DS_Store
+
+js/varien/accordion.js
+js/varien/configurable.js
+js/varien/form.js
+js/varien/iehover-fix.js
+js/varien/js.js
+js/varien/payment.js
+js/varien/product.js
+js/varien/telephone.js
+js/varien/weee.js
+!js/varien/menu.js
