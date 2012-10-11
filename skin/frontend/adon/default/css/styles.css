@@ -165,6 +165,7 @@ button.button {
     cursor:pointer;
     background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff3300), color-stop(1, #d51800) );
     background: -moz-linear-gradient(center top , #FF3300 5%, #D51800 100%) repeat scroll 0 0 #FF3300;
+    background-color: #d51800;
     border: 1px solid #D83526;
     color: #FFFFFF;
     border-radius: 4px 4px 4px 4px;
@@ -183,7 +184,7 @@ button.button:hover {
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d51800', endColorstr='#a81402');
     background-color:#d51800;
 }
-button.button span { float:left; white-space:nowrap; }
+button.button span { white-space:nowrap; }
 button.button span span { padding:4px 20px;}
 button.disabled span { color:#bbb !important; }
 
@@ -1408,6 +1409,7 @@ tr.summary-details-excluded { font-style:italic; }
 .cart-table .btn-update { margin-left:7px; }
 
 .cart-table button.btn-update, .cart-table button.btn-empty, .cart-table button.btn-continue {
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fefefe), color-stop(1, #eaeaea) );
     background: -moz-linear-gradient(center top , #FEFEFE 5%, #EAEAEA 100%) repeat scroll 0 0 #FEFEFE;
     border: 1px solid #DADADA;
     color: #373737;
