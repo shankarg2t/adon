@@ -1316,6 +1316,7 @@ tr.summary-details-excluded { font-style:italic; }
 .cms-home .col-main .std ul.products-grid {list-style:none;padding-left:0;}
 .cms-home .col-main .std ul.products-grid button.button {padding:2px}
 .cms-home .col-main .std .products-grid li.item { height:330px;  }
+.cms-home .col-main .std .products-grid li.item { height:280px\9; margin-bottom: 60px\9;  }
 .cms-home .col-main .std ul.products-grid li {
     background-color:#FFFFFF;
     background-image:-webkit-gradient(linear, 0 0%, 0 100%, color-stop(0.05, #FFFFFF), to(#F3F3F3));
