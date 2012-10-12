@@ -20,6 +20,7 @@
 
 var $j = jQuery.noConflict();
 $j(document).ready(function(){
+    $j('#pantoneval').hide();
     $j('#slidesHome').cycle({
         fx: 'scrollHorz',
         timeout: 6000,
@@ -51,17 +52,40 @@ $j(document).ready(function(){
         defaultTab: "#tab0"
     });
     /* custom option radio button delete function */
-    jQuery('.product-custom-option:radio').bind('click', function(e) { 
-        jQuery(this).parent().parent().parent().find('.disable-product-custom-option').remove();
-        jQuery(this).parent().append('<span class="disable-product-custom-option">x</span>');
+    $j('.product-custom-option:radio').bind('click', function(e) { 
+        $j(this).parent().parent().parent().find('.disable-product-custom-option').remove();
+        $j(this).parent().append('<span class="disable-product-custom-option">x</span>');
     });
-    jQuery('.disable-product-custom-option').live('click', function(e) { 
-        jQuery(this).parent().find('input:radio').prop('checked', false);
-        jQuery(this).remove();
+    $j('.disable-product-custom-option').live('click', function(e) { 
+        $j(this).parent().find('input:radio').prop('checked', false);
+        $j(this).remove();
     });
-
-
-  
+    /* custom option show pantone value text field if Pantone color option super-attribute is selected */
+    if ($j("#attribute92 option:selected").text() == 'Pantone') {
+        $j('#pantoneval').show();
+    } else {
+        $j('.product-options .swatchesContainer').css('margin-bottom','0');
+    }
+    $j('#attribute92').change(function() { 
+        if ($j("#attribute92 option:selected").text() == 'Pantone') {
+            $j('.product-options .swatchesContainer').css('margin-bottom','85px');
+            $j('#pantoneval').show();
+        }
+        else {
+            $j('#pantoneval').hide();
+            $j('.product-options .swatchesContainer').css('margin-bottom','0');
+        }
+    });
+    $j('.swatchContainer img').bind('click', function(e) { 
+        if($j(this).attr('title') == 'Pantone') {
+            $j('.product-options .swatchesContainer').css('margin-bottom','85px');
+            $j(this).parent().parent().parent().parent().parent().parent().parent().find('#pantoneval').show();
+        }
+    });
+    $j('.swatchContainer div').bind('click', function(e) { 
+        $j('.product-options .swatchesContainer').css('margin-bottom','0');
+        $j(this).parent().parent().parent().parent().parent().parent().parent().find('#pantoneval').hide();
+    });
 });
 
 

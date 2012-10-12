@@ -511,6 +511,13 @@ if (count($_options)) {
           $optionItemAcc = $this->__('Accessories');
           $optionItemSvc = $this->__('Services');
     ?>
+    <div id="pantoneval">
+        <?php foreach ($_options as $_option): ?>
+                    <?php if (strpos($this->getOptionHtml($_option, $isFirstOption), 'Pantone')): ?>
+                        <?php echo '<div id="customOptionsTabPantone">' . $this->getOptionHtml($_option, $isFirstOption) . '</div>' ?>
+                    <?php endif; ?>
+                <?php endforeach; ?>  
+    </div>
     <dl><div id="easyCustomOptionsTabs">
             <ul class="customOptionsTabs">
                 <?php foreach ($_options as $_option): ?>
