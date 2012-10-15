@@ -87,7 +87,3 @@ $j(document).ready(function(){
         $j(this).parent().parent().parent().parent().parent().parent().parent().find('#pantoneval').hide();
     });
 });
-
-
-
-

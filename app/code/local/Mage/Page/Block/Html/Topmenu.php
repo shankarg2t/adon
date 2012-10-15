@@ -121,9 +121,9 @@ class Mage_Page_Block_Html_Topmenu extends Mage_Core_Block_Template {
                 if (!empty($childrenWrapClass)) {
                     $html .= '<div class="' . $childrenWrapClass . '">';
                 }
-                $html .= '<ul class="level' . $childLevel . '"><span class="arrow"><img alt="" src="' . $this->getSkinUrl('images/arrow.png') . '"></span>';
+                $html .= '<span class="submenuWrap"><div class="arrow"><img alt="" src="' . $this->getSkinUrl('images/arrow.png') . '"></div><ul class="level' . $childLevel . '">';
                 $html .= $childrenHtml;
-                $html .= '</ul>';
+                $html .= '</ul></span>';
 
                 if (!empty($childrenWrapClass)) {
                     $html .= '</div>';

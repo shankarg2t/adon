@@ -299,6 +299,7 @@ p.control input.radio { margin-right:6px; }
 .buttons-set p.required { margin:0 0 10px; }
 .buttons-set .back-link { float:left; margin:0; }
 .buttons-set button.button { float:right; margin-left:5px; }
+*+html .buttons-set button.button { height:30px; }
 
 .buttons-set-order { margin:10px 0 0; }
 .buttons-set-order .please-wait { padding:5px 7px 0 0; }
@@ -527,7 +528,7 @@ tr.summary-details-excluded { font-style:italic; }
 .logo { float:left; }
 .header-container {margin-right:16px;}
 
-.header { margin:0 0 60px; padding: 0 0 11px; background: url("../images/navi-line.png") repeat-x scroll center bottom transparent; position:relative; top:-9px; }
+.header { margin:0 0 60px; padding: 0 0 11px; background: url("../images/navi-line.png") repeat-x scroll center bottom transparent; position:relative; top:-9px;z-index:9999;}
 .header .logo { float:left; text-decoration:none !important; }
 .header .logo strong { position:absolute; top:-999em; left:-999em; width:0; height:0; font-size:0; line-height:0; text-indent:-999em; overflow:hidden; }
 
@@ -642,8 +643,7 @@ tr.summary-details-excluded { font-style:italic; }
     top: 58px;
 }
 
-#nav { float:right; margin:15px 0 0; font-size:12px;position: relative;
-       top:11px; }
+#nav { float:right; margin:15px 0 0; font-size:12px;top:11px; }
 
 /* All Levels */ /* Style consistent throughout all nav levels */
 #nav li { position:relative;text-align:left;top:3px;}
@@ -672,7 +672,6 @@ tr.summary-details-excluded { font-style:italic; }
     position: absolute;
     margin-top: -24px;
     margin-left:20px;
-    z-index: 9999;
 }
 
 
@@ -688,7 +687,7 @@ tr.summary-details-excluded { font-style:italic; }
 #nav ul li a { font-weight:normal !important; }
 
 
-#nav ul{ 
+#nav .submenuWrap { 
     position:absolute; 
     width:15em; 
     top:48px; 
@@ -698,15 +697,15 @@ tr.summary-details-excluded { font-style:italic; }
     list-style-type: none;
     margin-top: 8px;
     padding: 10px;
-    z-index:999;
+    z-index:666!important;
 }
 
-#nav li ul.shown-sub li.first {
+#nav li span.shown-sub li.first {
     background:url(../images/arrow.png) no-repeat 50% -60%;
 }
 
 /* Show menu */
-#nav li ul.shown-sub { left:10px; }
+#nav li span.shown-sub { left:10px; }
 
 /********** Navigation > */
 /* ======================================================================================= */
@@ -891,10 +890,9 @@ tr.summary-details-excluded { font-style:italic; }
 .category-products {}
 
 /* View Type: Grid */
-.products-grid { position:relative; }
 .products-grid.last { border-bottom:0; }
 .products-grid li.item { float:left; width:161px; padding:0 9px; overflow:hidden; }
-.products-grid li.item { z-index:999 }
+.products-grid li.item { }
 .products-grid li.itemHover { float:left; width:161px; padding:0 9px; }
 .products-grid li.itemHover a, .products-grid li.itemHover h2, .products-grid li.itemHover .price-box  { z-index:999; position: relative; }
 .products-grid li.itemHover .actions{ position:absolute; margin:-285px 0 0 -30px; z-index: 1; background-color: white; padding:20px; width: 180px; box-shadow: 0 0 10px 0 rgba(173, 173, 173, 0.75);}
@@ -902,6 +900,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 
 .products-grid li.itemHover .actions button.button{ margin-top:275px}
+*+html .products-grid li.itemHover .actions button.button {height: 30px;}
 .products-grid li.itemHover .actions button.button, .products-grid li.itemHover .actions ul { margin-left:13px}
 
 .products-grid .actions .swatch-category-container { margin-top:20px; overflow:auto !important; height:auto !important; position:relative; }
@@ -1087,6 +1086,7 @@ tr.summary-details-excluded { font-style:italic; }
 .add-to-cart label { float:left; margin-right:5px; font-weight:bold; line-height:20px; color:#555; }
 .add-to-cart .qty { float:left; margin-right:5px; }
 .add-to-cart button.button { float:left; margin:-3px 0 0; }
+*+html .add-to-cart button.button {height: 30px;}
 .add-to-cart .paypal-logo { clear:left; margin:0; text-align:right; }
 .add-to-cart .paypal-logo .paypal-or { clear:both; display:block; margin:5px 60px 5px 0; }
 
