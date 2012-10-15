@@ -1,7 +1,7 @@
 app/code/community/Find/
 app/code/community/Phoenix/
 app/code/core/
-app/design/adminhtml/default/default/
+
 app/design/adminhtml/default/find/
 app/design/frontend/base/
 app/design/frontend/default/blank/
@@ -110,3 +110,9 @@ js/varien/product.js
 js/varien/telephone.js
 js/varien/weee.js
 !js/varien/menu.js
+
+app/design/adminhtml/default/default/layout/*
+app/design/adminhtml/default/default/template/*
+app/design/adminhtml/default/default/locale/*
+!app/design/adminhtml/default/default/layout/colorselectorplus.xml
+!app/design/adminhtml/default/default/template/colorselectorplus/
