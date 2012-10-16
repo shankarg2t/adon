@@ -646,7 +646,7 @@ tr.summary-details-excluded { font-style:italic; }
 #nav { float:right; margin:15px 0 0; font-size:12px;top:11px; }
 
 /* All Levels */ /* Style consistent throughout all nav levels */
-#nav li { position:relative;text-align:left;top:3px;}
+#nav li { position:relative;text-align:left;}
 #nav li a.level-top {padding-bottom: 8px;}
 #nav li.over a.level-top, #nav li.active a.level-top { margin-bottom: 0px; background: url("../images/navi-line-red.png") repeat-x scroll 0 100% transparent; }
 #nav a,
@@ -661,6 +661,8 @@ tr.summary-details-excluded { font-style:italic; }
 #nav li.subACT .level0 .first a { color:#444; }
 #nav li.subACT .level0 .active a { color:#f81b00; }
 #nav .level1 a:hover { color:#f81b00!important; }
+#nav .level0 {top:14px;}
+*+html #nav .level0 {top:13px;}
 #nav .level0 li.level1 a { color:#444; }
 #nav .level0 li.active a { color:#f81b00; }
 #nav a { float:left;
@@ -1414,9 +1416,13 @@ tr.summary-details-excluded { font-style:italic; }
 .cart-table button.btn-update, .cart-table button.btn-empty, .cart-table button.btn-continue {
     background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fefefe), color-stop(1, #eaeaea) );
     background: -moz-linear-gradient(center top , #FEFEFE 5%, #EAEAEA 100%) repeat scroll 0 0 #FEFEFE;
+    background-color:#fefefe; 
     border: 1px solid #DADADA;
     color: #373737;
     text-shadow: 1px 1px 0 #DDDDDD;
+}
+*+html .cart-table button.btn-update, *+html .cart-table button.btn-empty, *+html .cart-table button.btn-continue {
+    height:30px;
 }
 #empty_cart_button {
     display:none;
