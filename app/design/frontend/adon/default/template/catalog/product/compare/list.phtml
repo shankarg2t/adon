@@ -83,7 +83,6 @@
             <?php if($_attribute->getAttributeCode() != 'short_description'): ?>
             <tr>
                 <?php $_i=0 ?>
-                <?php Mage::Log($_attribute->getAttributeCode()); ?>
                 <?php foreach($this->getItems() as $_item): ?>
                 <?php if($_i++%10==0): ?>
                 <th><span class="nobr"><?php echo $_attribute->getStoreLabel() ?></span></th>
