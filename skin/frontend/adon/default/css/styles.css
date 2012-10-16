@@ -178,6 +178,7 @@ button.button {
     text-decoration: none;
     text-shadow: 1px 1px 0 #B23E35;
 }
+*+html button.button { height:30px;}
 button.button:hover {
     background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #d51800), color-stop(1, #a81402) );
     background:-moz-linear-gradient( center top, #d51800 5%, #a81402 100% );
@@ -788,6 +789,7 @@ tr.summary-details-excluded { font-style:italic; }
 .block-cart .subtotal { background:url(../images/bkg_subtotal.gif) no-repeat 50% 0; margin:5px 0 0; line-height:23px; }
 .block-cart .subtotal .price { font-weight:bold; }
 .block-cart .actions button.button { margin-right:27px;  }
+*+html .block-cart .actions button.button { margin-right:27px; height:30px;  }
 .block-cart .actions button.button span { line-height: 15px;  }
 .block-cart .actions .paypal-logo { float:left; width:100%; margin:3px 0 0; text-align:right; }
 
@@ -840,8 +842,16 @@ tr.summary-details-excluded { font-style:italic; }
     margin:10px 21px;
     cursor:pointer;
 }
+*+html .block-compare button.greyButton {
+    margin:10px 0px;
+    position:relative;
+    left:-15px;
+}
 .block-compare button.greyButton span span {
     padding: 2px 20px;
+}
+*+html .block-compare button.greyButton span span {
+    padding: 2px 0;
 }
 .block-compare .block-title span small {
     display:none;
@@ -1767,6 +1777,7 @@ tr.summary-details-excluded { font-style:italic; }
 /* My Account ============================================================================= */
 .my-account .title-buttons .link-rss { float:none; margin:0; }
 .my-account button.button { margin:10px 5px;}
+*+html .my-account button.button { height:30px;}
 
 /********** < Dashboard */
 .dashboard .welcome-msg { margin:0 8em 1.5em 0; }
