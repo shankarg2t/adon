@@ -1,4 +1,4 @@
-#mageworxLightbox{	position: absolute;	left: 0; width: 100%; z-index: 100; text-align: center; line-height: 0;}
+#mageworxLightbox{position: absolute; left: 0; width: 100%; z-index: 9999; text-align: center; line-height: 0;}
 #mageworxLightbox img{ width: auto; height: auto;}
 #mageworxLightbox a img{ border: none; }
 
