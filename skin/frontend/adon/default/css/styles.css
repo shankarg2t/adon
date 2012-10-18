@@ -653,7 +653,7 @@ tr.summary-details-excluded { font-style:italic; }
 #nav a,
 #nav a:hover { display:block; line-height:1.3em; text-decoration:none; }
 #nav span { display:block; cursor:pointer; white-space:nowrap; }
-#nav li ul span {white-space:normal; }
+#nav li ul span {white-space:normal; white-space:nowrap;}
 
 /* 1st Level */
 #nav li { float:left; margin:1px 8px 1px 1px; padding:3px 8px; }
@@ -1155,6 +1155,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Product Shop */
 .product-view .product-shop { float:right; width:380px;z-index:10; }
+.product-view .product-shop .description { margin-bottom: 15px; }
 .col1-layout .product-view .product-shop { float:right; width:576px; }
 .col3-layout .product-view .product-shop { float:none; width:auto; }
 .product-view .product-shop .product-name { margin:0 0 5px; }
@@ -1173,7 +1174,7 @@ tr.summary-details-excluded { font-style:italic; }
 .product-options { margin:0; padding:0; }
 .product-options dt { padding:10px 0 0; font-weight:normal; }
 .product-options dt label {  }
-.product-options dt label.required em { color:#eb340a; margin-left:5px; }
+.product-options dt label.required em { color:#eb340a; margin-right:5px; }
 .product-options dd .qty-holder { display:block; padding:10px 0 0; }
 .product-options dd .qty-holder label { vertical-align:middle; }
 .product-options dd .qty-disabled { background:none; border:0; padding:3px; color:#444; }
@@ -2196,7 +2197,7 @@ tr.summary-details-excluded { font-style:italic; }
 .custom-options #pantoneval {
     position: absolute;
     margin-left: 365px;
-    margin-top: -170px;
+    margin-top: -200px;
 }
 
 .product-options .swatchesContainer {
