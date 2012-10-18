@@ -116,3 +116,4 @@ app/design/adminhtml/default/default/template/*
 app/design/adminhtml/default/default/locale/*
 !app/design/adminhtml/default/default/layout/colorselectorplus.xml
 !app/design/adminhtml/default/default/template/colorselectorplus/
+!app/design/adminhtml/default/default/layout/massimporterpro.xml
