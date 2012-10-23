@@ -375,6 +375,7 @@ p.required { font-size:12px; text-align:right; color:#EB340A; }
 .pager .pages ol { display:inline; }
 .pager .pages li { display:inline; margin:0 2px; }
 .pager .pages .current {}
+.pager .i-previous {text-decoration:none;}
 
 .pager .sort-by { float:right; padding-right:36px; }
 .pager .sort-by label { vertical-align:middle; }
@@ -1115,6 +1116,9 @@ tr.summary-details-excluded { font-style:italic; }
 
 .product-essential { padding:0; }
 .product-essential h2 { font:bold 12px/1.25 Arial, Helvetica, sans-serif; }
+.product-essential .addthis_toolbox { float:right; margin-top:20px; }
+.product-essential .addthis_toolbox .addthis_button_facebook_like iframe {width:110px!important; }
+.product-essential .addthis_toolbox .addthis_button_tweet iframe {width:90px!important; }
 
 .product-collateral {}
 .product-collateral h2 { font-size:19px; font-weight:normal; line-height:1.15; }
@@ -1969,8 +1973,10 @@ tr.summary-details-excluded { font-style:italic; }
 .footer { margin:15px 0 5px; }
 .footer a { color:#444; }
 
-.footer .f-left { width:520px; }
-.footer .f-right { width:429px; }
+.footer .f-right {  }
+.footer .f-middle {  float:left; width:500px; height:175px; background:url(../images/adonShop_footer.png) 0 0 no-repeat;  }
+.footer .f-middle .slogan { width:318px; height:109px; background:url(../images/adonShop_footerVoteileBand.png) 0 0 no-repeat; position: absolute; margin-top:-20px; margin-left:-20px;}
+.footer .f-left { width: 270px; }
 .footer .f-bottom { width: 992px; clear:both; padding-top:20px;}
 .footer .f-bottom ul { float:left;}
 
@@ -2197,7 +2203,7 @@ tr.summary-details-excluded { font-style:italic; }
 .custom-options #pantoneval {
     position: absolute;
     margin-left: 365px;
-    margin-top: -200px;
+    margin-top: -170px;
 }
 
 .product-options .swatchesContainer {
