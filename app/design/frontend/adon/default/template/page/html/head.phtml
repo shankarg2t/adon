@@ -30,7 +30,6 @@ $path  = Mage::helper('catalog')->getBreadcrumbPath();
 foreach ($path as $name => $breadcrumb) {
   $breadcrumbs .= ' - '.$breadcrumb['label'];
 }
-Mage::Log(Mage::helper('catalog/image')->init(Mage::registry('current_product'), 'small_image')->resize(190));
 ?>
 <title>www.adonstick.ch <?php echo $breadcrumbs //$this->getTitle() ?></title>
 <meta name="description" content="<?php echo htmlspecialchars($this->getDescription()) ?>" />
