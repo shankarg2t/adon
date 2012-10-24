@@ -58,6 +58,7 @@ $j(document).ready(function(){
     });
     $j('.disable-product-custom-option').live('click', function(e) { 
         $j(this).parent().find('input:radio').prop('checked', false);
+        opConfig.reloadPrice();
         $j(this).remove();
     });
     /* custom option show pantone value text field if Pantone color option super-attribute is selected */

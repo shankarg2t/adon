@@ -31,6 +31,14 @@
 <meta name="robots" content="<?php echo htmlspecialchars($this->getRobots()) ?>" />
 <link rel="icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
 <link rel="shortcut icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
+
+<?php if($_SERVER['HTTP_USER_AGENT'] == 'facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)') : ?>
+<?php if (Mage::registry('current_product')) : ?>
+<meta property="og:title" content="<?= $_product->getName() ?> im Online Shop XY bestellen" />
+<meta property="og:image" content="<?php echo Mage::helper('catalog/image')->init(Mage::registry('current_product'), 'small_image')->resize(190);?>" />
+<?php endif;?>
+<?php endif;?>
+
 <!--[if lt IE 7]>
 <script type="text/javascript">
 //<![CDATA[

@@ -41,7 +41,7 @@ class Inchoo_Prevnext_Helper_Data extends Mage_Core_Helper_Abstract
                 $positions = array_reverse(array_keys(Mage::registry('current_category')->getProductsPosition()));
             }
             $cpk = @array_search($prodId, $positions);
-            $slice = array_slice($positions, 0, $cpk);
+            $slice = array_slice($positions, $cpk -1, count($positions));
             foreach ($slice as $productId) {
                     $product = Mage::getModel('catalog/product')->load($productId);
                     if ($product && $product->getId() && $product->isVisibleInCatalog() && $product->isVisibleInSiteVisibility()) {
