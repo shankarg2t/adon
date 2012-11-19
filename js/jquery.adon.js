@@ -50,9 +50,9 @@ $j(document).ready(function(){
     $j('#easyCustomOptionsTabs').easytabs({
         animate: false,
         defaultTab: "#tab0"
-    });
+    });   
     /* custom option radio button delete function */
-    $j('.product-custom-option:radio').bind('click', function(e) { 
+    $j('.product-custom-option:radio').live('click', function(e) { 
         $j(this).parent().parent().parent().find('.disable-product-custom-option').remove();
         $j(this).parent().append('<span class="disable-product-custom-option">x</span>');
     });
@@ -62,13 +62,9 @@ $j(document).ready(function(){
         $j(this).remove();
     });
     /* custom option show pantone value text field if Pantone color option super-attribute is selected */
-    if ($j("#attribute92 option:selected").text() == 'Pantone') {
-        $j('#pantoneval').show();
-    } else {
-        $j('.product-options .swatchesContainer').css('margin-bottom','0');
-    }
-    $j('#attribute92').change(function() { 
-        if ($j("#attribute92 option:selected").text() == 'Pantone') {
+    $j('#attribute143').change(function() { 
+        if ($j("#attribute92 option:selected").text().indexOf("Pantone") >= 0) {
+            
             $j('.product-options .swatchesContainer').css('margin-bottom','85px');
             $j('#pantoneval').show();
         }
@@ -76,13 +72,7 @@ $j(document).ready(function(){
             $j('#pantoneval').hide();
             $j('.product-options .swatchesContainer').css('margin-bottom','0');
         }
-    });
-    $j('.swatchContainer img').bind('click', function(e) { 
-        if($j(this).attr('title') == 'Pantone') {
-            $j('.product-options .swatchesContainer').css('margin-bottom','85px');
-            $j(this).parent().parent().parent().parent().parent().parent().parent().find('#pantoneval').show();
-        }
-    });
+    }); 
     $j('.swatchContainer div').bind('click', function(e) { 
         $j('.product-options .swatchesContainer').css('margin-bottom','0');
         $j(this).parent().parent().parent().parent().parent().parent().parent().find('#pantoneval').hide();

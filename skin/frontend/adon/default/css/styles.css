@@ -1008,6 +1008,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 .price-box { margin:5px 0 10px; }
 .price-box .price { font-size:13px; color:#444; }
+.configurable-price-from-label {display: none;}
 
 /* Regular price */
 .regular-price { color:#444; }
@@ -1082,8 +1083,11 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Tier Prices */
 .product-pricing,
-.tier-prices { background-color: white;
-    padding: 5px 10px; }
+.tier-prices { 
+    display: none;
+    background-color: white;
+    padding: 5px 10px; 
+}
 .tier-prices .benefit { font-style:italic; font-weight:bold; }
 .tier-prices .price { font-weight:bold; }
 
@@ -2204,10 +2208,6 @@ tr.summary-details-excluded { font-style:italic; }
     position: absolute;
     margin-left: 365px;
     margin-top: -170px;
-}
-
-.product-options .swatchesContainer {
-    margin-bottom: 85px;
 }
 
 .custom-options #pantoneval dt {
