@@ -321,7 +321,7 @@ Product.Config.prototype.showCustomOptionsBlock = function(productId, parentId) 
                 // ongoing.ch 2012
                 checkedOptionsIndex.each(function(index1, elm1){
                     jQuery("#easyCustomOptionsPanel input").each(function(index2, elm2) {
-                        if(index1 == index2) {
+                        if(index1 == index2 && jQuery("#easyCustomOptionsPanel input").length == i) {
                             jQuery(elm2).attr('checked', true);
                             if(jQuery(elm2).is(':radio')) {
                                 jQuery(elm2).parent().append('<span class="disable-product-custom-option">x</span>');
