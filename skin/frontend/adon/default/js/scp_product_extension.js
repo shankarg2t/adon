@@ -293,17 +293,48 @@ Product.Config.prototype.showCustomOptionsBlock = function(productId, parentId) 
         //options are being loaded.
         //$$('span.scp-please-wait').each(function(el) {el.show()});
 
-        //prodForm.getElements().each(function(el) {el.disable()});
-           
-        // Save 
-        
+        //prodForm.getElements().each(function(el) { 
+        //    console.log(el);
+        //});
+        //
+        // register position of all input fields that are checked
+        // ongoing.ch 2012
+        var i = 0;
+        var checkedOptionsIndex = [];
+        jQuery("#easyCustomOptionsPanel input").each(function(index, elm) {
+            var attr = jQuery(elm).attr('checked');
+            // For some browsers, `attr` is undefined; for others,
+            // `attr` is false.  Check for both.
+            if (attr == 'checked') {
+                checkedOptionsIndex[i] = index; 
+            }
+            i++;
+        });
+        var pantoneVal = jQuery("#customOptionsTabPantone input").val();
+
+
         new Ajax.Updater('SCPcustomOptionsDiv', coUrl, {
             method: 'get',
             evalScripts: true,
             onComplete: function() {
+                // query which input fields are selected and set them again
+                // ongoing.ch 2012
+                checkedOptionsIndex.each(function(index1, elm1){
+                    jQuery("#easyCustomOptionsPanel input").each(function(index2, elm2) {
+                        if(index1 == index2) {
+                            jQuery(elm2).attr('checked', true);
+                            if(jQuery(elm2).is(':radio')) {
+                                jQuery(elm2).parent().append('<span class="disable-product-custom-option">x</span>');
+                            }
+                        }
+                    });
+                });
+                jQuery("#customOptionsTabPantone input").val(pantoneVal);
+                
+                
                 $$('span.scp-please-wait').each(function(el) {
                     el.hide()
-                });
+                });               
                 Effect.Fade('SCPcustomOptionsDiv', {
                     duration: 0.5, 
                     from: 0.5, 
@@ -321,7 +352,7 @@ Product.Config.prototype.showCustomOptionsBlock = function(productId, parentId) 
                     jQuery('#pantoneval').show();
                 } else {
                     jQuery('#pantoneval').hide();
-                }
+                }   
             }
         });
     } else {
