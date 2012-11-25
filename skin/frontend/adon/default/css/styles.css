@@ -614,7 +614,7 @@ tr.summary-details-excluded { font-style:italic; }
 .form-search { 
     float:right; 
     background: url("../images/metanav-right.png") no-repeat scroll right top #454545;
-    color: #FFFFFF;
+    color: #000000;
     display: block;
     font-family: 'Nunito',sans-serif;
     font-size: 12px;
@@ -632,7 +632,7 @@ tr.summary-details-excluded { font-style:italic; }
 .form-search .search-autocomplete li { text-align:left; border-bottom:1px solid #f4eee7; padding:2px 8px 1px 8px; cursor:pointer; }
 .form-search .search-autocomplete li .amount { float:right; font-weight:bold; }
 .form-search .search-autocomplete li.odd { background-color:#f6f6f6; }
-.form-search .search-autocomplete li.selected { background-color:#ecf9ea; }
+.form-search .search-autocomplete li.selected { background-color:#b2b2b2; }
 
 .header-container .top-container { padding:5px 12px; background:#fff; border:1px solid #bbb; border-width:0 1px 1px; text-align:right; }
 
@@ -2212,6 +2212,10 @@ tr.summary-details-excluded { font-style:italic; }
 
 .custom-options #pantoneval dt {
     font-weight: normal;
+}
+.custom-options dl div {margin-bottom:20px;}
+.custom-options dl div dd ul li span label {
+    margin-left:10px;
 }
 
     .customOptionsTab { display: inline-block; zoom:1; *display:inline;  }

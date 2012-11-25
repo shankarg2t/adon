@@ -34,7 +34,7 @@ $_option = $this->getOption();
 $valuesHtml = $this->getValuesHtml(); 
 if ($valuesHtml): ?>
 <div <?php if (Mage::helper('customoptions')->hideDependentOption() && $_option->getIsDependent()) { ?>style="display: none;"<?php } ?>>
-<dt><label><?php echo $this->htmlEscape($_option->getTitle()) ?><?php if ($_option->getIsRequire()): ?><span class="required">&nbsp;*</span><?php endif; ?></label>
+<dt  class="redButton"><label><?php echo $this->htmlEscape($_option->getTitle()) ?><?php if ($_option->getIsRequire()): ?><span class="required">&nbsp;*</span><?php endif; ?></label>
 <?php if ($_option->getDescription()): ?><p class="note"><?php echo $_option->getDescription() ?></p><?php endif; ?></dt>
 <dd<?php if ($_option->decoratedIsLast) { ?> class="last"<?php } ?>>
     <?php echo $valuesHtml ?>
