@@ -38,16 +38,19 @@
         <div class="f-right">
             <?php echo $this->getChildHtml('store_switcher') ?>
             <a onclick="_gaq.push(['_trackEvent', 'Facebook', 'Header Click']);" target="_blank" href="https://www.facebook.com/AdonProduction"><img alt="Facebook" src="<?php echo($this->getSkinUrl('images/facebook.png')) ?>"></a>
-            <a onclick="_gaq.push(['_trackEvent', 'Xing', 'Header']);" target="_blank" href="http://www.xing.com/companies/adcomproductionag/"><img width="98" height="23" border="0" alt="Adcom Production AG" title="Adcom Production AG" src="http://www.xing.com/img/xing/xe/corporate_pages/cp_button.png"></a><br/>
+            <a onclick="_gaq.push(['_trackEvent', 'Xing', 'Header']);" target="_blank" href="https://www.xing.com/companies/adonproductionag/"><img width="98" height="23" border="0" alt="Adcom Production AG" title="Adcom Production AG" src="http://www.xing.com/img/xing/xe/corporate_pages/cp_button.png"></a><br/>
             <?php echo $this->getChildHtml('newsletter') ?>
 
-            
+
             <a onclick="pageTracker._trackPageview('/_forms/newsletter-form/open');" class="greyButton" rel="prettyPhoto" href="#newsletter-form">
                 <img alt="Newsletter" src="<?php echo $this->getSkinUrl('images/email.png') ?>" />&nbsp;
                 Newsletter</a>
-
-            <div class="hide" id="newsletter-form"><iframe width="500" scrolling="no" height="300" frameborder="0" border="0" src="http://www.adcom-production.ch/de/newsletter/"></iframe></div>
-
+            <?php if (Mage::app()->getLocale()->getLocaleCode() == 'de_CH'): ?>
+                <div class="hide" id="newsletter-form"><iframe width="500" scrolling="no" height="300" frameborder="0" border="0" src="http://www.adcom-production.ch/de/newsletter/"></iframe></div>
+            <?php endif ?>
+            <?php if (Mage::app()->getLocale()->getLocaleCode() == 'fr_FR'): ?>
+                <div class="hide" id="newsletter-form"><iframe width="500" scrolling="no" height="300" frameborder="0" border="0" src="http://www.adcom-production.ch/fr/newsletter/"></iframe></div>
+            <?php endif ?>
             <script type="text/javascript" charset="utf-8">
                 jQuery.noConflict();
                 jQuery(document).ready(function(){

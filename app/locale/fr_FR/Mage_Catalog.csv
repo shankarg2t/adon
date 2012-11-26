@@ -104,6 +104,7 @@
 "Buy %1$s for %2$s","Achetez-en %1$s pour %2$s"
 "Buy %1$s for %2$s (%3$s incl. tax) each","Achetez-en %1$s à %2$s (%3$s TTC) pièce"
 "Buy %1$s for %2$s each","Achetez-en %1$s à %2$s pièce"
+"Buy","Commander"
 "Cache Lifetime (Seconds)","Durée de vie du cache (secondes)"
 "Cache refresh needed.","Il est nécessaire de rafraichir le cache."
 "Can be used only with catalog input type Dropdown","Ne peut être utilisé qu'avec un catalogue type liste déroulante"
@@ -882,3 +883,5 @@
 "Packing","Emballage"
 "Accessories","Accessoires"
 "Services","Service"
+"printarea","Zone d' impression"
+"exkl. MwSt","hors TVA"

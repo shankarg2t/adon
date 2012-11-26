@@ -530,7 +530,7 @@ tr.summary-details-excluded { font-style:italic; }
 .logo { float:left; }
 .header-container {margin-right:16px;}
 
-.header { margin:0 0 60px; padding: 0 0 11px; background: url("../images/navi-line.png") repeat-x scroll center bottom transparent; position:relative; top:-9px;z-index:9999;}
+.header { margin:18px 0 60px; padding: 0 0 11px; background: url("../images/navi-line.png") repeat-x scroll center bottom transparent; position:relative; top:-9px;z-index:9999;}
 .header .logo { float:left; text-decoration:none !important; }
 .header .logo strong { position:absolute; top:-999em; left:-999em; width:0; height:0; font-size:0; line-height:0; text-indent:-999em; overflow:hidden; }
 
@@ -1974,10 +1974,11 @@ tr.summary-details-excluded { font-style:italic; }
     background-color: #f9f9f9;
 }
 .footer-container .footer .f-left div {margin:5px 0}
+.footer-container .footer .f-left b {color:#000000}
 .footer { margin:15px 0 5px; }
 .footer a { color:#444; }
 
-.footer .f-right {  }
+.footer .f-right { margin:5px 50px 0 0 }
 .footer .f-middle {  float:left; width:500px; height:175px; background:url(../images/adonShop_footer.png) 0 0 no-repeat;  }
 .footer .f-middle .slogan { width:318px; height:109px; background:url(../images/adonShop_footerVoteileBand.png) 0 0 no-repeat; position: absolute; margin-top:-20px; margin-left:-20px;}
 .footer .f-left { width: 270px; }

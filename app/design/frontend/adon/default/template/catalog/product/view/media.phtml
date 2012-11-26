@@ -95,7 +95,7 @@ $_helper = $this->helper('catalog/output');
         </div>
     <?php endif; ?>
     <?php if (isset($_product['printarea_scheme']) && $_product['printarea_scheme'] != 'no_selection'): ?>
-        <div class="galleryThumbs"><h2>Druckbereich</h2><a rel="mageworxLightbox" href="<?php echo $this->helper('catalog/image')->init($_product, 'printarea_scheme') ?>" target="blank" title="<?php echo $this->__('Printarea scheme') ?>"><img src="<?php echo $this->helper('catalog/image')->init($_product, 'printarea_scheme')->resize(300, 78) ?>" width="300" height="78" /></a>
+        <div class="galleryThumbs"><h2><?php echo $this->__('printarea') ?></h2><a rel="mageworxLightbox" href="<?php echo $this->helper('catalog/image')->init($_product, 'printarea_scheme') ?>" target="blank" title="<?php echo $this->__('Printarea scheme') ?>"><img src="<?php echo $this->helper('catalog/image')->init($_product, 'printarea_scheme')->resize(300, 78) ?>" width="300" height="78" /></a>
         </div>
     <?php endif; ?>  
 </div>
