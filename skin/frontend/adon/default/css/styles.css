@@ -1084,7 +1084,7 @@ tr.summary-details-excluded { font-style:italic; }
 /* Tier Prices */
 .product-pricing,
 .tier-prices { 
-    display: none;
+    /*display: none;*/
     background-color: white;
     padding: 5px 10px; 
 }

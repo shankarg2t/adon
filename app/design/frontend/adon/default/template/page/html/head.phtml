@@ -28,13 +28,14 @@
 <?php 
 $path  = Mage::helper('catalog')->getBreadcrumbPath();
 $i = 0;
+$breadcrumbs = '';
 foreach ($path as $name => $breadcrumb) {
     if($i != 0) {$breadcrumbs .= '&nbsp;>&nbsp;';}
   $breadcrumbs .= $breadcrumb['label'];
   $i++;
 }
 ?>
-<title><?php echo $breadcrumbs //$this->getTitle() ?> - Adon Production AG</title>
+<title><?php echo $breadcrumbs //$this->getTitle() ?>  Adon Production AG</title>
 <meta name="description" content="<?php echo htmlspecialchars($this->getDescription()) ?>" />
 <meta name="keywords" content="<?php echo htmlspecialchars($this->getKeywords()) ?>" />
 <meta name="robots" content="<?php echo htmlspecialchars($this->getRobots()) ?>" />
