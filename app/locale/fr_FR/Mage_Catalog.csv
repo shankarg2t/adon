@@ -103,7 +103,7 @@
 "Browse By","Filtrer par"
 "Buy %1$s for %2$s","Achetez-en %1$s pour %2$s"
 "Buy %1$s for %2$s (%3$s incl. tax) each","Achetez-en %1$s à %2$s (%3$s TTC) pièce"
-"Buy %1$s for %2$s each","Achetez-en %1$s à %2$s pièce"
+"Buy %1$s for %2$s each","%1$s a partir de %2$s par pièce"
 "Buy","Commander"
 "Cache Lifetime (Seconds)","Durée de vie du cache (secondes)"
 "Cache refresh needed.","Il est nécessaire de rafraichir le cache."
