@@ -161,8 +161,8 @@ $_minimalPrice = $_taxHelper->getPrice($_product, $_minimalPriceValue, $_simpleP
             <?php else: ?>
                 <?php if ($_weeeTaxAmount && $_weeeHelper->typeOfDisplay($_product, 0)): // including ?>
                     <span class="regular-price" id="product-price-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">
-                        <?php //echo $_coreHelper->currency($_price + $_weeeTaxAmount, true, true) ?>
-                        <?php echo '<span class="price">' . $_coreHelper->currency($_minimalPrice, true, false) . '</span>' ?>
+                        <?php echo $_coreHelper->currency($_price + $_weeeTaxAmount, true, true) ?>
+                        <?php //echo '<span class="price">' . $_coreHelper->currency($_minimalPrice, true, false) . '</span>' ?>
                     </span>
                 <?php elseif ($_weeeTaxAmount && $_weeeHelper->typeOfDisplay($_product, 1)): // incl. + weee ?>
                     <span class="regular-price" id="product-price-<?php echo $_id ?><?php echo $this->getIdSuffix() ?>">

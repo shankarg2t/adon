@@ -1088,6 +1088,7 @@ tr.summary-details-excluded { font-style:italic; }
     background-color: white;
     padding: 5px 10px; 
 }
+div.product-pricing {display:none;}
 .tier-prices .benefit { font-style:italic; font-weight:bold; }
 .tier-prices .price { font-weight:bold; }
 
