@@ -43,13 +43,17 @@ if (Mage::helper('weee')->typeOfDisplay($_product, array(1,2,4))) {
 
 ?>
 <?php if (count($_tierPrices) > 0): ?>
-    <ul class="<?php echo ($this->getInGrouped() ? 'tier-prices-grouped product-pricing-grouped' : 'tier-prices product-pricing'); ?>">
+
+     <?php $adonPrice = $this->helper('tax')->getPrice($_product, $_product->getPrice()) ?>
+
+
+    <ul class="<?php echo ($this->getInGrouped() ? 'tier-prices-grouped product-pricing-grouped' : 'tier-prices product-pricing'); ?>" name="<?php echo $adonPrice; ?>">
     <?php if ($this->getInGrouped()): ?>
         <?php $_tierPrices = $this->getTierPrices($_product); ?>
     <?php endif; ?>
     <?php Mage::helper('weee')->processTierPrices($_product, $_tierPrices); ?>
     <?php foreach ($_tierPrices as $_index => $_price): ?>
-        <li>
+        <li class="<?php echo $_price['price_qty']; ?>">
         <?php if ($_catalogHelper->canApplyMsrp($_product)): ?>
             <?php if ($this->getInGrouped()): ?>
                 <?php echo $this->__('Buy %1$s for', $_price['price_qty']) ?>:

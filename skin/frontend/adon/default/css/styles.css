@@ -1004,6 +1004,11 @@ tr.summary-details-excluded { font-style:italic; }
 .alert-stock { margin:0; font-size:12px; }
 
 /********** < Product Prices */
+
+.product-shop .price-box .regular-price {display:none;}
+.lowestPricePerCustGroup { font-size: 30px; color:#444;}
+.lowestPricePerCustGroup span { font-size: 14px;}
+
 .price {  white-space:nowrap !important; }
 
 .price-box { margin:5px 0 10px; }

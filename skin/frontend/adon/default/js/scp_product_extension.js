@@ -427,7 +427,7 @@ Product.OptionsPrice.prototype.reloadPriceLabels = function(productPriceIsKnown)
         $(duplicatePriceSpanId).select('span.configurable-price-from-label').each(function(label) {
             label.innerHTML = priceFromLabel;
         });
-    }
+    }    
 };
 
 

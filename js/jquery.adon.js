@@ -55,10 +55,15 @@ $j(document).ready(function(){
     $j('.product-custom-option:radio').live('click', function(e) { 
         $j(this).parent().parent().parent().find('.disable-product-custom-option').remove();
         $j(this).parent().append('<span class="disable-product-custom-option">x</span>');
+        adonUpdateTierPrice();        
     });
+    $j('.product-custom-option:checkbox').live('click', function(e) { 
+        adonUpdateTierPrice();        
+    });    
     $j('.disable-product-custom-option').live('click', function(e) { 
         $j(this).parent().find('input:radio').prop('checked', false);
         opConfig.reloadPrice();
+        adonUpdateTierPrice();        
         $j(this).remove();
     });
     /* custom option show pantone value text field if Pantone color option super-attribute is selected */
@@ -72,9 +77,49 @@ $j(document).ready(function(){
             $j('#pantoneval').hide();
             $j('.product-options .swatchesContainer').css('margin-bottom','0');
         }
+        $j(".product-shop .price-box .regular-price").show();
+        $j(".lowestPricePerCustGroup").hide();
     }); 
     $j('.swatchContainer div').bind('click', function(e) { 
         $j('.product-options .swatchesContainer').css('margin-bottom','0');
         $j(this).parent().parent().parent().parent().parent().parent().parent().find('#pantoneval').hide();
     });
+    
+    $j('#qty').change(function() {
+        opConfig.reloadPrice();
+        adonUpdateTierPrice();
+    });
+    // unhide Price Tag ontop of the description if cost attribute is not filled
+if($j('.lowestPricePerCustGroup').length == 0) { 
+    $j('.product-shop .price-box .regular-price').show(); 
+}
 });
+
+
+function adonUpdateTierPrice() {
+
+    var currentQty = jQuery("#qty").attr("value");
+    var selectedTier = null;
+
+    jQuery(".tier-prices.product-pricing li").each(function(e, li){ 
+        var tier = parseInt(jQuery(li).attr("class"));
+
+        if(selectedTier == null || selectedTier < currentQty) {
+
+            if(tier <= currentQty) {
+                selectedTier = tier;
+            }        
+        }
+    });
+
+    if(selectedTier != null) {
+
+        var tierPrice =  parseFloat((jQuery(".tier-prices.product-pricing li." + selectedTier + " span").text().replace(/CHF/g, '' )) );
+        var regularPrice = parseFloat((jQuery(".tier-prices.product-pricing").attr("name")) );
+        var currentPriceWithOptions = parseFloat((jQuery(".product-options-bottom .price-box .regular-price span.price").text().replace(/CHF/g, '' )) );
+
+        var newPrice = (currentPriceWithOptions - regularPrice + tierPrice);
+        var newPriceRounded = newPrice.toFixed(2);
+        jQuery(".product-options-bottom .price-box .regular-price span.price").text("CHF " + newPriceRounded);
+    }
+}
