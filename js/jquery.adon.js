@@ -92,6 +92,8 @@ $j(document).ready(function(){
     // unhide Price Tag ontop of the description if cost attribute is not filled
 if($j('.lowestPricePerCustGroup').length == 0) { 
     $j('.product-shop .price-box .regular-price').show(); 
+    // unhide price tag on product list if cost attribute is not filled
+    $j('.category-products .products-grid .price-box .regular-price').show();
 }
 });
 

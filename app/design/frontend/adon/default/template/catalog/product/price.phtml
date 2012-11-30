@@ -205,6 +205,24 @@ $_minimalPrice = $_taxHelper->getPrice($_product, $_minimalPriceValue, $_simpleP
                             <?php echo $_coreHelper->currency($_finalPrice, true, true) ?>
                         <?php endif; ?>
                     </span>
+                    <?php if (Mage::getResourceModel('catalog/product')->getAttributeRawValue($_product->getId(), 'cost') != ''): ?>
+                    <span class="lowestPricePerCustGroup">
+                        <?php
+                        // not logged in
+                        if (Mage::getSingleton('customer/session')->getCustomerGroupId() == '0') {
+                            echo '<span class="fromPriceTag">'. $this->__('from Price') . '</span>&nbsp;CHF&nbsp;' . round(Mage::getResourceModel('catalog/product')->getAttributeRawValue($_product->getId(), 'cost') / 0.65, '2') . '&nbsp;<span class="exklMwstTag">' . $this->__('exkl. MwSt') . '</span>';
+                        }
+                        // Reseller
+                        elseif (Mage::getSingleton('customer/session')->getCustomerGroupId() == '5') {
+                            echo '<span class="fromPriceTag">'. $this->__('from Price') . '</span>&nbsp;CHF&nbsp;' . round(Mage::getResourceModel('catalog/product')->getAttributeRawValue($_product->getId(), 'cost') / 0.25, '2') . '&nbsp;<span class="exklMwstTag">' . $this->__('exkl. MwSt') . '</span>';
+                        }
+                        // Combat
+                        elseif (Mage::getSingleton('customer/session')->getCustomerGroupId() == '6') {
+                            echo '<span class="fromPriceTag">'. $this->__('from Price') . '</span>&nbsp;CHF&nbsp;' . round(Mage::getResourceModel('catalog/product')->getAttributeRawValue($_product->getId(), 'cost') / 0.15, '2') . '&nbsp;<span class="exklMwstTag">' . $this->__('exkl. MwSt') . '</span>';
+                        }
+                        ?>
+                    </span>
+                <?php endif; ?>
                 <?php endif; ?>
             <?php endif; ?>
         <?php else: /* if ($_finalPrice == $_price): */ ?>

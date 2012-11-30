@@ -1006,6 +1006,12 @@ tr.summary-details-excluded { font-style:italic; }
 /********** < Product Prices */
 
 .product-shop .price-box .regular-price {display:none;}
+.product-options-bottom .price-box .lowestPricePerCustGroup {display:none;}
+.category-products .products-grid .price-box .regular-price {display:none;}
+.category-products .products-grid .price-box .lowestPricePerCustGroup .exklMwstTag {display:none;}
+
+
+
 .lowestPricePerCustGroup { font-size: 30px; color:#444;}
 .lowestPricePerCustGroup span { font-size: 14px;}
 
