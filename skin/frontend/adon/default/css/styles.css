@@ -683,7 +683,7 @@ tr.summary-details-excluded { font-style:italic; }
 #nav ul li,
 #nav ul li.active,
 #nav ul li.over { float:none; border:none; background:none; margin:0; padding:0; padding-bottom:1px; text-transform:none; }
-#nav ul li.parent { background:url(../images/bkg_nav_parent.gif) no-repeat 100% 50%; }
+#nav ul li.parent {/*background:url(../images/bkg_nav_parent.gif) no-repeat 100% 50%;*/ background:none; }
 #nav ul li.last { padding-bottom:0; }
 #nav ul li.active { margin:0; border:0; background:none; }
 #nav ul a,
@@ -702,6 +702,9 @@ tr.summary-details-excluded { font-style:italic; }
     margin-top: 8px;
     padding: 10px;
     z-index:666!important;
+}
+#nav .submenuWrap .level1 .submenuWrap {
+    display:none;
 }
 
 #nav li span.shown-sub li.first {
@@ -1009,7 +1012,6 @@ tr.summary-details-excluded { font-style:italic; }
 .product-options-bottom .price-box .lowestPricePerCustGroup {display:none;}
 .category-products .products-grid .price-box .regular-price {display:none;}
 .category-products .products-grid .price-box .lowestPricePerCustGroup .exklMwstTag {display:none;}
-
 
 
 .lowestPricePerCustGroup { font-size: 30px; color:#444;}
