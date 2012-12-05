@@ -1110,6 +1110,10 @@ div.product-pricing {display:none;}
 
 .tier-prices-grouped li .price { font-weight:bold; }
 
+.product-shop .tier-prices {
+    margin-bottom: 15px;
+}
+
 /* Add to Links */
 .add-to-links { margin:3px 0 0; }
 .add-to-links li { line-height:1.25; }
